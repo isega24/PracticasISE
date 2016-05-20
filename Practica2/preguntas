@@ -1,0 +1,84 @@
+Pregunta 4
+
+/etc/apt/apt.conf.d
+/etc/apt/apt.conf/01proxy
+    Acquire::http::Proxy dirIPproxy
+x
+Pregunta 5
+    Telnet es increiblemente inseguro, y ssh no (Casi todo).
+
+
+Generar clave pública:
+    ssh-keygen -t rsa
+    Además, te pide passphrase, que en realidad es solo contraseña local para acceder a la clave privada en local.
+    ssh-copy-id
+
+Cuestion 8 que archivo cambia la configuración de sshd?
+    /etc/ssh/sshd_config
+
+
+Cuestión 9
+    Si, es necesario reiniciar el servicio. Para ello: sudo service <servicio> restart/start.
+
+
+Cuestión 10
+    
+Instalar lamp-server^ en ubuntu
+
+Instalar httpct, maria-db / mariadb, php, php-mysql en centos
+systemctl para añadir a la lista de cosas que guardar en memoria
+    systemctl enable httpd.service
+Abrir puertos de http:
+    sudo firewall-cmd --permanent --add-service http
+reiniciar el servicio http:
+    sudo systemctl restart firewalld.service
+
+Para instalar mariadb-server, se recomienda que se ejecute el script dado por defecto:
+
+Proyectos de algo:
+    Jonas
+    wildfly
+    Jghost
+
+Objetivo: FTP windows con un fichero no vacio y descargarlo desde ubuntu.
+    1 poner las máquinas en red nat
+    2 Asegurarse de que se ven las máquinas(PING)
+
+
+    3 Crear un usuario windows
+    4 Crear un servidor FTP(permitiendo usuario anterior)
+        Windows habla de roles cuando quiere hablar sobre servicios.
+        FTP agregar sitio(ftp) Hay que dar una carpeta desde la cual el servicio actue.
+
+        Sin SSL
+        autenticación basica
+        permitir acceso a usuarios especificados(permisos de lectura)
+
+    5 Firewall (puerto 21)
+
+
+cuestión opcional 4:
+    Instalar tomcat
+
+Mongodb
+    Hacer una base de datos, insertar y hacer una búsqueda
+    los strings entre comillar
+    numeros no
+
+    use <nombre>
+    show dbs
+
+http://www.unixmen.com/install-webmin-ubuntu-14-04/
+
+cuestión 17:
+    1 que la entrada sea el fichero de configuración de ssh
+    2 buscar la linea donde se especifica el puerto
+    3 sustituir el puerto por 22222 (por ejemplo).
+
+cuestión 18:
+    1 Ejemplo de uso:
+        Mostrar por pantalla la linea la configuración de ssh donde esté la configuración del puerto.
+        getline para obtener fichero
+        buscar cadena de caracteres "PORT" ($1)
+
+        Si lo encuentro, lo muestro por $2

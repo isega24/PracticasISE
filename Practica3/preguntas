@@ -1,0 +1,39 @@
+Opcional 2:
+  comando para nagios:
+    en CentOS:
+      nagios
+      nagios-plugins
+      nagios-plugins-nrpe
+      nagios-dlevel
+
+ganglia:
+    monitorización.
+
+    la de wikipedia si funciona
+
+zabbix:
+  A los ordenadores los llama agentes.
+  instalar zabbix como si fuese cualquier otra cosa(buscando en internet)
+  https://www.zabbix.com/documentation/3.0/manual/installation/install_from_packages
+  ^Importante^
+  comando importante: mysql -uroot -p zabbix(Abajo)
+
+  /etc/apache2/conf.d/zabbix
+  It's necessary to uncomment the “date.timezone” setting and set the correct
+  timezone for you. After changing the configuration file
+  restart the apache web server.
+
+  Tambien reiniciar servidor apache2
+
+  Todo es como en la documentación oficial menos las tablas que se importan:
+  En vez de así,en el fichero que se nos crea hay un comprimido y se hace lo sigueinte:
+  zcat create.sql.gz | mysql -u root -p zabbix
+
+Resumen:
+  Instalamos repo
+  update
+  install zabbix-fronted-php
+                    -agent
+
+
+  Una vez hecho esto, debe estar disponible en localhost/zabbix

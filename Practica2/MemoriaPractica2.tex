@@ -1,0 +1,93 @@
+\input{preambuloSimple.tex}
+
+\title{	
+	\normalfont \normalsize 
+	\textsc{{\bf Ingeniería de Servidores (2014-2015)} \\ Grado en Ingeniería Informática \\ Universidad de Granada} \\ [25pt] % Your university, school and/or department name(s)
+	\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+	\huge Memoria Práctica 2 \\ % The assignment title
+	\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Iván Sevillano García} % Nombre y apellidos
+
+\date{\normalsize\today} % Incluye la fecha actual
+
+\begin{document}
+
+\maketitle % Muestra el Título
+
+\newpage %inserta un salto de página
+
+\tableofcontents % para generar el índice de contenidos
+
+\newpage
+
+\section{Instalación de servicios y configuraciones.}
+En esta sección se responden a las preguntas referentes a la administración y configuración de software en los distintos sistemas operativos.
+\subsection{Yum. Gestor de paquetes de CentOS.}
+
+Esta aplicación es el gestor predeterminado de CentOS, Red Hat, Fedora y derivados.
+
+\begin{itemize}
+	\item \textbf{Liste los argumentos de yum necesarios para instalar, buscar y eliminar paquetes.}\\
+	Para instalar un paquete del que ya sabemos el nombre podremos utilizar yum seguido del comando \textbf{install} tras el que podremos el paquete a instalar. Para buscar, el comando \textbf{search} seguido de alguna referencia indirecta del paquete(parte del nombre en general) nos dará como resultado el paquete que estemos buscando. Para eliminar paquetes, yum tiene comandos \textbf{remove} y \textbf{erase} seguidos del paquete a eliminar, lo que produce redundancia de funciones, ya que hacen exactamente el mismo trabajo. Esto es un fallo de diseñoy se deberá eliminar un o de estos términos en un futuro.\\
+	
+	\item \textbf{¿Que hay que hacer para que yum tenga acceso a internet en el aula de prácticas(puesto que esta utiliza un proxy por detrás)?}\\
+	Para contestar a esta pregunta se nos ofrece dos pistas: acceder al archivo de configuración de yum en /etc/yum/ y que el proxy a utilizar es \textbf{stargate.ugr.es:3128}. Buscamos en el manual de configuración de yum y nos dice que necesitamos incluir en el archivo \textbf{yum.conf} la URL del proxy. También hay opciones para acceder al proxy con un usuario y una contraseña(proxy\_username y proxy\_password).
+	
+\end{itemize}
+Para responder a estas preguntas, hemos consultado el manual que yum nos ofrece\cite{a1} y la página referente a el archivo de configuración\cite{a2}.
+
+\subsection{Apt. Gestor de paquetes de Debian.}
+Esta aplicación es el gestor predeterminado de Debian y sus derivados, como por ejemplo ubuntu.
+\begin{itemize}
+	\item \textbf{Indique el comando para buscar un paquete en un repositorio y el
+		correspondiente para instalarlo.}\\
+	Para buscar un paquete del que tenemos parte del nombre o similar, debemos utilizar el comando \textbf{apt search}, y para instalarle, el comando \textbf{apt install}.\cite{b1}
+	
+	
+	 \item \textbf{Indique qué ha modificado para que apt pueda acceder a los servidores de paquetes a través del proxy. ¿Cómo añadimos un nuevo repositorio?}\\
+	 Según el manual proporcionado por apt.conf:\\
+	 
+	 "\textit{http::Proxy define el proxy predeterminado que utilizar para direcciones HTTP URI. Utiliza el formato estándar
+	 	http://[[usuario][:contraseña]@]máquina[:puerto]/. También se puede especificar un proxy por cada máquina usando la forma
+	 	http::Proxy::<máquina> con la palabra especial DIRECT que significa que no se use ningún proxy. La variable de entorno http\_proxy
+	 	se usará en caso de no definir ninguna de las opciones anteriores.
+	 }"\cite{b2}\\
+	 
+	 También según el mismo manual, la forma de añadir repositorios es añadirlos al archivo /etc/apt/sources.list con permisos de root. Se puede utilizar el comando edit-sources, con el mismo resultado que editarlos con un editor de texto directamente, ya que este comando solo llama a un editor a escoger\cite{b1}.
+	 
+	 
+	 
+\end{itemize}
+
+\subsection{Cuestión opcional: Gestor de paquetes de OpenSUSE.}
+Por cuestión de tiempo, en esta asignatura no utilizaremos OpenSUSE, pero si vamos a responder a la pregunta de cuál es el gestor de paquetes de este Sistema Operativo.\\
+
+En la página oficial de OpenSUSE, en la parte que explica el funcionamiento de su gestión de paquetes\cite{c1} se dice que éste tiene dos gestores, uno con un entorno gráfico y otro para consola. El primero es YaST y el segundo, Zypper.
+
+\newpage
+\section{Instalación del servicio de acceso seguro(SSH)}
+ 
+ Para el acceso remoto desde una máquina a otra hay distintos protocolos. Entre ellos, destacan telnet y ssh. Sin embargo, para las conexiones que realizaremos, utilizaremos ssh.
+ 
+ \begin{itemize}
+ 	\item ¿Por qué?\\
+ 	Telnet es un servicio básico de conexión entre máquinas, en el cuál sólo hay envío y recepción de mensajes. Ssh (Secure shell), además de esto, los mensajes se envían de forma segura, es decir, encriptando mensajes, usando huellas digitales para comprobar de donde vienen los mensajes y demás algoritmos de seguridad. En definitiva, ssh no tiene nada que ver con telnet por su carácter inseguro.
+ \end{itemize}
+ 
+ Tras instalar el servicio openssh-server en la máquina, probaremos ahora a conectarnos remotamente. Para ello, tenemos que saber
+
+
+ 
+
+
+\newpage
+\begin{thebibliography}{xx}
+	\bibitem{a1} http://linux.die.net/man/8/yum
+	\bibitem{a2} http://linux.die.net/man/5/yum.conf
+	\bibitem{b1} http://linux.die.net/man/8/apt
+	\bibitem{b2} http://linux.die.net/man/5/apt.conf
+	
+\end{thebibliography}
+\end{document}
