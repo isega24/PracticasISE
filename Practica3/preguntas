@@ -37,3 +37,34 @@ Resumen:
 
 
   Una vez hecho esto, debe estar disponible en localhost/zabbix
+
+
+
+Lo mismo con cacti.
+
+Awstats
+  -Nombre paquete siguiente: awstats
+  -Habilitar el módulo CGI de apache pista: comando-> a2enmod
+  -Reiniciar apache
+  -Suponemos que mi dominio es putocalvoPDOOexample.com
+  ->Editamos /etc/hosts y añadimos 127.0.1.1
+  -Copiar /etc/awstats/awstats.conf->/etc/awstats/awstats.calvoexample.conf
+  - Editamos:
+    -SiteDomain=calvoexample.com
+    -HostAlias="www.calvoexample.com 127.0.1.1 " (Entre espacios y todo entre comillas)//y dejamos lo que haya
+    -AllowToUpdateFromBrowser=0->1
+
+  -Ejecutar el configurador: #/usr/lib/cgi-bin/awstats.pl -config=calvoexample.com -update
+  -Ejecutar 3 comandos:
+    A)cp -r /usr/lib/cgi-bin /var/www/html
+    B)chown www-data:www-data /var/www/html/cgi-bin
+    C)chmod -R 755 /var/www/html/cgi-bin
+  URL: calvoexample.com/cgi-bin/awstats.pl?config=calvoexample.com
+
+Acuerdate de strace en caso de que seas un pro(Lo dudo)
+
+
+La de profiling con C NO LA HAGAS
+
+Profiling en consultas
+MongoDB Opcional
