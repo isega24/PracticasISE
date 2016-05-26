@@ -3,3 +3,6 @@
 \contentsline {subsection}{\numberline {1.1}Cuesti\IeC {\'o}n 1:}{3}
 \contentsline {subsection}{\numberline {1.2}Programaci\IeC {\'o}n de tareas con cron}{3}
 \contentsline {section}{\numberline {2}Analizando que ocurre en el Kernel con Dmesg}{4}
+\contentsline {section}{\numberline {3}Monitorizaci\IeC {\'o}n del Hardware.}{4}
+\contentsline {section}{\numberline {4}Otros monitores de sistema.}{5}
+\contentsline {subsection}{\numberline {4.1}Munin}{5}
