@@ -213,34 +213,29 @@
 	En este gráfico vemos que hay alrededor de 110 procesos lanzados de los cuales la gran mayoría está $sleeping$, o esperando a estar corriendo. También vemos que apenas han quedado procesos zombies. Es importante notar que siempre hay al menos un proceso ejecutandose.
 	
 \end{itemize}
-\subsection{Nagios}
+\subsection{Zabbix}
 \begin{itemize}
-	\item \textbf{Instale Nagios en su sistema (el que prefiera) documentando el
-		proceso y muestre el resultado de la monitorización de su sistema comentando qué
-		aparece.}\\
-	Para instalar Nagios por medio de la herramienta apt, ejecutamos el siguiente comando:\\
+	\item \textbf{Prueba a instalar este monitor es alguno de sus tres sistemas. Realice capturas de pantalla del proceso de instalación y comente capturas de pantalla del programa en ejecución.}\\
 	
-	$sudo$ $apt$-$get$ $install$ $nagios3$\\
+	Para instalar el monitor de zabbix he consultado los manuales de la página\cite{zabbix} para descargar este desde paquetes. Según la misma página nos da las instrucciones. Para empezar tenemos que añadir a lista de repositorios el repositorio de este proyecto:\\
 	
-	Tras esto, en el proceso de instalación nos preguntan que configuración deseamos, en nuestro caso la que esté por defecto:\\
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Nagios1}
-	\caption[Configuración]{Configuraciones posibles de Nagios.}
-	\label{fig:Nagios1}
-	\end{figure}
+	# $wget$ $http://repo.zabbix.com/zabbix/3.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_3.0-1+trusty_all.deb$\\
+	# $dpkg$ -$i$ $zabbix-release_3.0$-$1+trusty_all.deb$\\
+	# $apt$-$get$ $update$\\
 	
-	También nos pide un nombre de dominio:\\
-	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Nagios2}
-	\caption[nagios2]{Solicitud de nombre de dominio.}
-	\label{fig:Nagios2}
-	\end{figure}
+	Tras lo cual podremos instalar los paquetes necesarios para el servidor de zabbix:\\
 	
-	También nos pide una contraseña para Nagios.
+	# $apt$-$get$ $install$ $zabbix$-$server$-$mysql$ $zabbix$-$frontend$-$php$\\
 	
+	Para tener zabbix inicializado con una base de datos ya creada, se nos facilita un ejemplo que podemos utilizar para comprobar que está funcionando. Para ello, ejecutamos el siguiente script que se encuentra comprimido en el directorio $/usr/share/doc/zabbix$-$server$-$mysql$:\\
+	
+	# $zcat$ $create.sql.gz$ | $mysql$ -$uroot$ $zabbix$\\
+	
+	
+	
+	 
 \end{itemize}
+
 
 \subsection{Monitorizando un servicio}
 \begin{itemize}
@@ -295,6 +290,7 @@
 	\bibitem{strace} https://debian-administration.org/article/352/Using\_strace\_to\_debug\_application\_errors
 	\bibitem{mysqlProfile} http://dev.mysql.com/doc/refman/5.7/en/show-profile.html
 	\bibitem{mysqlProfiles} http://dev.mysql.com/doc/refman/5.7/en/show-profiles.html
+	\bibitem{zabbix} https://www.zabbix.com/documentation/3.0/manual/installation/install\_from\_packages
 	
 \end{thebibliography}
 \end{document}
