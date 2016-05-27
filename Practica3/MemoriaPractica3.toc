@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {3}Monitorizaci\IeC {\'o}n del Hardware.}{9}
 \contentsline {section}{\numberline {4}Otros monitores de sistema.}{10}
 \contentsline {subsection}{\numberline {4.1}Munin}{10}
-\contentsline {subsection}{\numberline {4.2}Nagios}{12}
-\contentsline {subsection}{\numberline {4.3}Monitorizando un servicio}{13}
-\contentsline {section}{\numberline {5}Profiling}{14}
-\contentsline {subsection}{\numberline {5.1}Bases de datos}{14}
+\contentsline {subsection}{\numberline {4.2}Zabbix}{12}
+\contentsline {subsection}{\numberline {4.3}Monitorizando un servicio}{16}
+\contentsline {section}{\numberline {5}Profiling}{17}
+\contentsline {subsection}{\numberline {5.1}Bases de datos}{18}

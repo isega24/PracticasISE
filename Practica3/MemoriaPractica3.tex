@@ -138,20 +138,6 @@
 		\caption[Seguimiento]{Iniciar seguimiento con click derecho->Iniciar.}
 		\label{fig:seguimiento}
 		\end{figure}
-
-
-		
-		
-
-
-
-		
-		
-
-
-
-
-
 		
 \end{itemize}
 
@@ -219,18 +205,85 @@
 	
 	Para instalar el monitor de zabbix he consultado los manuales de la página\cite{zabbix} para descargar este desde paquetes. Según la misma página nos da las instrucciones. Para empezar tenemos que añadir a lista de repositorios el repositorio de este proyecto:\\
 	
-	# $wget$ $http://repo.zabbix.com/zabbix/3.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_3.0-1+trusty_all.deb$\\
-	# $dpkg$ -$i$ $zabbix-release_3.0$-$1+trusty_all.deb$\\
-	# $apt$-$get$ $update$\\
+	$wget$ $http://repo.zabbix.com/zabbix/3.0/ubuntu/pool/main/z/zabbix-release/zabbix$-$	release\_3$.$0$-$1$+$trusty\_all.deb$ \\
+	$dpkg$ -$i$ $zabbix-release_3.0$-$1+trusty_all.deb$\\
+	$apt$-$get$ $update$\\
 	
 	Tras lo cual podremos instalar los paquetes necesarios para el servidor de zabbix:\\
 	
-	# $apt$-$get$ $install$ $zabbix$-$server$-$mysql$ $zabbix$-$frontend$-$php$\\
+	$apt$-$get$ $install$ $zabbix$-$server$-$mysql$ $zabbix$-$frontend$-$php$\\
 	
 	Para tener zabbix inicializado con una base de datos ya creada, se nos facilita un ejemplo que podemos utilizar para comprobar que está funcionando. Para ello, ejecutamos el siguiente script que se encuentra comprimido en el directorio $/usr/share/doc/zabbix$-$server$-$mysql$:\\
 	
-	# $zcat$ $create.sql.gz$ | $mysql$ -$uroot$ $zabbix$\\
+	$zcat$ $create.sql.gz$ | $mysql$ -$uroot$ $prueba$\\
 	
+	El nombre de mi base de datos es prueba, creada anteriormente, así ya tenemos la tabla creada. Ahora, como cada vez que instalamos un servicio, debemos asegurarnos que está configurado como queremos, o como nos aconsejan que lo tengamos en la página web del proyecto. Para ello modificamos con nuestro editor favorito su archivo de configuración y descomentamos las siguientes líneas de opciones y añadimos lo necesario para que estas opciones queden en el archivo:\\
+
+	$DBHost=localhost$\\
+	$DBName=zabbix$\\
+	$DBUser=zabbix$\\
+	$DBPassword=zabbix$\\
+	
+	tras lo cual, como debemos hacer cuando modificamos el archivo de configuración de cualquier servicio, lo reiniciamos:\\
+	
+	$service$ $zabbix$-$server$ $restart$\\
+	
+	El último retoque que debemos hacer para terminar de configurar zabbix es descomentar la linea de zona horario en apache2 y poner nuestra zona horaria. Por supuesto, tras esto, reiniciamos apache:\\
+	
+	$service$ $apache2$ $restart$\\
+	
+	Ahora ya podremos entrar en zabbix desde cualquier navegador, en la ventana de setup:\\
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{zabbix1}
+	\caption[Inicio de zabbix]{Ventana que aparece la primera vez que te conectas a zabbix.}
+	\label{fig:zabbix1}
+	\end{figure}
+	
+	Ahora nos mostrarán unas opciones de configuración que deberemos rellenar:\\
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{zabbix2}
+	\caption[zabbix2]{Opciones por defecto de zabbix.}
+	\label{fig:zabbix2}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{zabbix3}
+	\caption[zabbix3]{Usuario de mysql.}
+	\label{fig:zabbix3}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{zabbix4}
+	\caption[zabbix4]{Usuario y contraseña usada para zabbix. Por defecto Admin/zabbix}
+	\label{fig:zabbix4}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{zabbix5}
+	\caption[zabbix5]{Sumario de la instalación.}
+	\label{fig:zabbix5}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{zabbix6}
+	\caption[zabbix6]{Configuración completada.}
+	\label{fig:zabbix6}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{zabbix7}
+	\caption[zabbix7]{Entrar por primera vez en zabbix}
+	\label{fig:zabbix7}
+	\end{figure}
 	
 	
 	 
@@ -251,6 +304,29 @@
 \end{itemize}
 
 \section{Profiling}
+	\begin{itemize}
+		\item \textbf{Escriba un script en python y analice su comportamiento usando el profiler presentado.}\\
+		Utilizando cProfile\cite{python} como profiler para analizar el comportamiento de el siguiente script:\\
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\linewidth]{pythonProgram}
+		\caption[Script en python]{Script de python sobre el que vamos a realizar el profiling.}
+		\label{fig:pythonProgram}
+		\end{figure}
+		
+		nos da la siguiente salida:\\
+		
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{python_profiling}
+		\caption[profiling python]{Salida del script anterior.}
+		\label{fig:python_profiling}
+		\end{figure}
+		
+		en la cual vemos varias llamadas a cada una de las funciones que hemos creado junto con el tiempo que pasa el programa en total en cada función o en particular en cada llamada a cada función.
+
+
+	\end{itemize}
 
 \subsection{Bases de datos}
 
@@ -291,6 +367,7 @@
 	\bibitem{mysqlProfile} http://dev.mysql.com/doc/refman/5.7/en/show-profile.html
 	\bibitem{mysqlProfiles} http://dev.mysql.com/doc/refman/5.7/en/show-profiles.html
 	\bibitem{zabbix} https://www.zabbix.com/documentation/3.0/manual/installation/install\_from\_packages
+	\bibitem{python} https://docs.python.org/2/library/profile.html
 	
 \end{thebibliography}
 \end{document}
