@@ -1,8 +1,13 @@
 \select@language {spanish}
 \contentsline {section}{\numberline {1}Conociendo el subsistema de archivos.}{3}
-\contentsline {subsection}{\numberline {1.1}Cuesti\IeC {\'o}n 1:}{3}
+\contentsline {subsection}{\numberline {1.1}Monitorizaci\IeC {\'o}n de Sistemas Linux}{3}
 \contentsline {subsection}{\numberline {1.2}Programaci\IeC {\'o}n de tareas con cron}{3}
-\contentsline {section}{\numberline {2}Analizando que ocurre en el Kernel con Dmesg}{4}
-\contentsline {section}{\numberline {3}Monitorizaci\IeC {\'o}n del Hardware.}{4}
-\contentsline {section}{\numberline {4}Otros monitores de sistema.}{5}
-\contentsline {subsection}{\numberline {4.1}Munin}{5}
+\contentsline {subsection}{\numberline {1.3}Analizando que ocurre en el Kernel con Dmesg}{3}
+\contentsline {section}{\numberline {2}Monitorizaci\IeC {\'o}n con Windows.}{4}
+\contentsline {section}{\numberline {3}Monitorizaci\IeC {\'o}n del Hardware.}{9}
+\contentsline {section}{\numberline {4}Otros monitores de sistema.}{10}
+\contentsline {subsection}{\numberline {4.1}Munin}{10}
+\contentsline {subsection}{\numberline {4.2}Nagios}{12}
+\contentsline {subsection}{\numberline {4.3}Monitorizando un servicio}{13}
+\contentsline {section}{\numberline {5}Profiling}{14}
+\contentsline {subsection}{\numberline {5.1}Bases de datos}{14}

@@ -24,7 +24,7 @@
 
 \section{Conociendo el subsistema de archivos.}
 
-\subsection{Cuestión 1:}
+\subsection{Monitorización de Sistemas Linux}
 
 \begin{itemize}
 	\item \textbf{¿Qué archivo le permite ver qué programas se han instalado con el gestor de paquetes?}\\
@@ -49,7 +49,7 @@
 	Los primeros cinco $items$ de la sentencia indican cuando queremos que se realice la tarea que se muestra a continuación, por este orden: minuto hora diaDelMes Mes DiaDeLaSemana. No hace especificar todos los campos, ya que el poner un asterisco($*$) nos dice que no tenga en cuenta este campo. Por ello, en nuestra sentencia, queremos que se ejecute el comando siempre que sean las doce de la noche, sea el día que sea, el mes que sea y el día de la semana que sea.
 \end{itemize}
 
-\section{Analizando que ocurre en el Kernel con Dmesg}
+\subsection{Analizando que ocurre en el Kernel con Dmesg}
 
 \begin{itemize}
 	\item \textbf{Pruebe a ejecutar el comando, conectar un dispositivo USB y vuelva a
@@ -66,6 +66,93 @@
 	Antes de conectar el pen-drive, no teníamos ninguna referencia del mismo. Tras conectarlo, el primer mensaje que se nos muestra es la presencia del mismo. También nos ofrece más información como que el disco no fue debidamente desmontado.
 
 	
+\end{itemize}
+\section{Monitorización con Windows.}
+\begin{itemize}
+		\item \textbf{Ejecute el monitor de “System Performance” y muestre el resultado. Incluya capturas de pantalla comentando la información que aparece.}\\
+		Al ejecutar el monitor de rendimiento de windows, nos aparece la siguiente interfaz general:\\
+		
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{Profiling_windows}
+		\caption[WindowsMonitor]{Monitor de rendimiento en Windows.}
+		\label{fig:Profiling_windows}
+		\end{figure}
+		
+		en donde vemos de forma general el rendimiento que está teniendo el sistema. Si queremos enfocarnos en algún campo en concreto haremos click en la gráfica la cuál esté monitorizando el componente que nos interese. Por ejemplo, para obtener información del porcentaje de CPU usado:\\
+		
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{WindowsCPU}
+		\caption[WindowsCPU]{Uso de la CPU en windows.}
+		\label{fig:WindowsCPU}
+		\end{figure}
+		
+		\item \textbf{Cree un recopilador de datos definido por el usuario (modo avanzado) que incluya tanto el contador de rendimiento como los datos de seguimiento: todos los referentes al procesador, al proceso y al servicio web, con un intervalo de muestra de 15 segundos y que almacene el resultado en el directorio $/Escritorio/logs$. Incluya las capturas de pantalla de cada paso.}\\
+		
+		Para empezar a crear un recopilador de datos clicamos dentro del rendimiento del sistema en recopilador de datos y creamos un nuevo recopilador de datos creado por el usuario:\\
+		
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{recopiladorDatos}
+		\caption[recopilador Datos]{Donde encontrar la creación del recopilador de datos.}
+		\label{fig:recopiladorDatos}
+		\end{figure}
+
+		
+		Tras esto, se nos pregunta de qué campos tiene que recopilar datos el sistema, en nuestro caso, los datos referentes al contador de rendimiento como los datos de seguimiento.\\
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.6\linewidth]{InicioRecopiladorDatos}
+			\caption[RecopiladorDatos]{Inicio de creación y ubicación del recopilador de datos.}
+			\label{fig:InicioRecopiladorDatos}
+		\end{figure}
+		
+		Se nos pregunta ahora sobre que componentes vamos a monitorizar. Nosotros escogemos los referentes a los procesos, procesamiento y servicio web:\\
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{MonitorizarWindowsServicios}
+		\caption[ServiciosWindows]{Escogiendo los componentes a monitorizar.}
+		\label{fig:MonitorizarWindowsServicios}
+		\end{figure}
+		
+		A la hora de darle a aceptar, la opción por defecto de tiempo para monitorizar el sistema de 15 segundos:\\
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{Intervalo15seg}
+		\caption[intervalos]{Intervalos de tiempo para obtener mediciones.}
+		\label{fig:Intervalo15seg}
+		\end{figure}
+		Por último, se nos pregunta donde queremos guardar los datos:\\
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{EscritorioLogs}
+		\caption[GuardarDatos]{Guardar los datos en el $/Escritorio/logs$ ($/Descktop/logs$).}
+		\label{fig:EscritorioLogs}
+		\end{figure}
+		
+		Ahora ya tenemos creado nuestro recopilador de datos, pero para que este comience a monitorizar, tenemos que iniciar el seguimiento:\\
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{seguimiento}
+		\caption[Seguimiento]{Iniciar seguimiento con click derecho->Iniciar.}
+		\label{fig:seguimiento}
+		\end{figure}
+
+
+		
+		
+
+
+
+		
+		
+
+
+
+
+
+		
 \end{itemize}
 
 \section{Monitorización del Hardware.}
@@ -130,10 +217,10 @@
 \begin{itemize}
 	\item \textbf{Instale Nagios en su sistema (el que prefiera) documentando el
 		proceso y muestre el resultado de la monitorización de su sistema comentando qué
-		aparece.}
+		aparece.}\\
 	Para instalar Nagios por medio de la herramienta apt, ejecutamos el siguiente comando:\\
 	
-	$sudo$ $apt-get$ $install$ $nagios3$\\
+	$sudo$ $apt$-$get$ $install$ $nagios3$\\
 	
 	Tras esto, en el proceso de instalación nos preguntan que configuración deseamos, en nuestro caso la que esté por defecto:\\
 	\begin{figure}[H]
@@ -176,7 +263,23 @@
 	\item \textbf{Acceda a la consola mysql (o a través de phpMyAdmin) y muestre el
 		resultado de mostrar el ”profile” de una consulta (la creación de la BD y la consulta la
 		puede hacer libremente)}\\
-	
+	Tras observar cómo usar el comando SHOW PROFILE y SHOW PROFILES en mysql\cite{mysqlProfile,mysqlProfiles}, para los cuales es necesario cambiar a 1(true) la variable profiling para que estas puedan trabajar, y haber hecho la creación de dos bases de datos, la inserción de unos cuantos datos y unas cuantas consultas pertinentes, el resultado de ejecutar ambos comandos son los siguientes:\\
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{mysqlProfile}
+	\caption[mysqlProfile]{Salida en mysql tras ejecutar SHOW PROFILE.}
+	\label{fig:mysqlProfile}
+	\end{figure}
+	Con este comando podemos ver los tiempos de carga, inicio, comprobación de permisos, etc... que realiza la base de datos. Ahora veamos cuanto ha tardado la base de datos en concreto en realizar las consultas y la creación de tablas:\\
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{mysqlProfiles}
+	\caption[mysqlProfiles]{Salida en mysql tras ejecutar SHOW PROFILES.}
+	\label{fig:mysqlProfiles}
+	\end{figure}
+	Aquí podemos ver los tiempos que ha tardado en cada una de las operaciones que le hemos ordenado que haga. En la misma, podemos ver que la creación de la tabla ha tardado alrededor de una décima de segundo y que en las inserciones, ha tardado alrededor de media décima. También vemos que al realizar mal una consulta, descartarla a sido rápido. \\
+	Un dato curioso es que a la hora de mostrar la primera tabla completa  ha tardado menos que en mostrar solo parte de la misma. Esto se debe a que a la hora de filtrar parte de la tabla se gasta más tiempo que en mostrar todo directamente.
+
 \end{itemize}
 \newpage
 \begin{thebibliography}{xx}
@@ -189,7 +292,9 @@
 	\bibitem{prime95} http://www.mersenne.org/
 	\bibitem{memtest86} http://www.memtest86.com/
 	\bibitem{nagios} https://www.nagios.org/
-	\bibitem{strace} https://debian-administration.org/article/352/Using_strace_to_debug_application_errors
+	\bibitem{strace} https://debian-administration.org/article/352/Using\_strace\_to\_debug\_application\_errors
+	\bibitem{mysqlProfile} http://dev.mysql.com/doc/refman/5.7/en/show-profile.html
+	\bibitem{mysqlProfiles} http://dev.mysql.com/doc/refman/5.7/en/show-profiles.html
 	
 \end{thebibliography}
 \end{document}
