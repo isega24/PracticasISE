@@ -158,8 +158,24 @@
 \subsection{Monitorizando un servicio}
 \begin{itemize}
 	\item \textbf{Escriba un breve resumen sobre alguno de los artículos donde se muestra
-		el uso de strace, o busque otro programa similar y coméntelo.}
-	En mi caso, he visitado la página\cite{strace}, en la que se habla de algunas utilidades de strace y de un problema que el escritor solucionó gracias a este monitor de servicios. Las primeras líneas nos explican que esta herramienta no solo puede monitorizar un servicio desde el principio (lanzandolo con strace), si no que también puede lanzarse aunque el servicio ya esté ejecutandose.\\
+		el uso de strace, o busque otro programa similar y coméntelo.}\\
+	
+	En mi caso, he visitado la página\cite{strace}, en la que se habla de algunas utilidades de strace y de un problema que el escritor solucionó gracias a este monitor de servicios. Las primeras líneas nos explican que esta herramienta no solo puede monitorizar un servicio desde el principio (lanzándolo con strace), si no que también puede lanzarse aunque el servicio ya esté ejecutándose. Esto es muy útil a la hora de monitorizar daemons que no deban ser reiniciados muy a menudo. En cuanto al problema que plantea, se resume de la siguiente manera: Se está utilizando un servicio SVN que fallaba aleatoriamente y nadie podía acceder al mismo. Reiniciar el servidor arreglaba el problema, pero no permanentemente, volvía a fallar. Al escritor se le ocurrió buscar en los archivos log, pero no había ninguno. Además, a la hora de observar cómo se iniciaban los procesos, todo parecía correcto, pero por alguna razón, el sistema se colgaba. Entonces recurrió, puesto que no podía modificar el código con opciones de debugueo, a utilizar un script que lanzara svnserver pero cazando la información que nos pueda dar strace. De esta forma, los clientes podrían seguir utilizando el servicio. Este cambio hizo visible el problema fácilmente en cuanto varios usuarios utilizaron el servicio. El problema era que a la hora de dar $filehandle$ para lectura, se daba el filehandle número 5, pero este fallaba. \\
+	
+	Por lo visto, este problema ocurre cuando el sistema no tiene la suficiente entropía para generar un stream aleatorio, por lo que reiniciar el sistema podría solucionar parcialmente el problema(podría "reiniciar" la entropía). El por qué de esta falta de entropía no se aclara ya que, según el autor, no era necesario. Utilizando, en vez de el generador de streams aleatorios $/dev/random$, otro generador que no fallase con la falta de entropía, $/dev/urandom$ , solucionó fácilmente el problema. En principio esto es un fallo de seguridad, pero en el trabajo que estaban realizando y según el criterio del autor, este fallo era irrelevante.\\
+	
+	La entrada del blog termina diciendo que este problema hubiese sido imposible de resolver sin un debugger o strace, siendo este último bastante más sencillo de utilizar.
+	
+\end{itemize}
+
+\section{Profiling}
+
+\subsection{Bases de datos}
+
+\begin{itemize}
+	\item \textbf{Acceda a la consola mysql (o a través de phpMyAdmin) y muestre el
+		resultado de mostrar el ”profile” de una consulta (la creación de la BD y la consulta la
+		puede hacer libremente)}\\
 	
 \end{itemize}
 \newpage
