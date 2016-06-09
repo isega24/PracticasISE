@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  30 MAY 2016 21:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  5 JUN 2016 23:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**MemoriaPractica3.tex
-(./MemoriaPractica3.tex
+**MemoriaPractica4.tex
+(./MemoriaPractica4.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (./preambuloSimple.tex
@@ -467,11 +467,11 @@ Class scrartcl Warning: Usage of package `fancyhdr' together
 \f@ncyO@olf=\skip61
 \f@ncyO@orf=\skip62
 ))
-(./MemoriaPractica3.aux
+(./MemoriaPractica4.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
-\openout1 = `MemoriaPractica3.aux'.
+\openout1 = `MemoriaPractica4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -581,470 +581,168 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./MemoriaPractica3.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./MemoriaPractica4.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
 \tf@toc=\write3
-\openout3 = `MemoriaPractica3.toc'.
+\openout3 = `MemoriaPractica4.toc'.
 
  [2]
-Overfull \hbox (9.62837pt too wide) in paragraph at lines 30--32
-\T1/cmr/m/n/10.95 En el di-rec-to-rio $\OML/cmm/m/it/10.95 =var=log=apt=$\T1/cm
-r/m/n/10.95 ,donde se en-cuen-tran los ar-chi-vos his-tory.log y term.log.
- []
+<phoronix-tests.png, id=16, 724.7075pt x 463.7325pt>
+File: phoronix-tests.png Graphic file (type png)
+ <use phoronix-tests.png>
+Package pdftex.def Info: phoronix-tests.png used on input line 36.
+(pdftex.def)             Requested size: 292.7776pt x 187.34361pt.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--44
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+Underfull \hbox (badness 10000) in paragraph at lines 30--39
 
  []
 
+<Grafico_resultados_phorenix.png, id=18, 1284.8pt x 722.7pt>
+File: Grafico_resultados_phorenix.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+<use Grafico_resultados_phorenix.png>
+Package pdftex.def Info: Grafico_resultados_phorenix.png used on input line 45.
 
- []
+(pdftex.def)             Requested size: 292.7776pt x 164.68468pt.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
-
- []
-
-[3] <dmesgPenDrive.png, id=23, 724.7075pt x 554.07pt>
-File: dmesgPenDrive.png Graphic file (type png)
- <use dmesgPenDrive.png>
-Package pdftex.def Info: dmesgPenDrive.png used on input line 61.
-(pdftex.def)             Requested size: 292.7776pt x 223.83913pt.
-
-[4 <./dmesgPenDrive.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 73--75
+Underfull \hbox (badness 10000) in paragraph at lines 41--48
 
  []
 
-<Profiling_windows.png, id=29, 803.0pt x 652.4375pt>
-File: Profiling_windows.png Graphic file (type png)
-
-<use Profiling_windows.png>
-Package pdftex.def Info: Profiling_windows.png used on input line 78.
-(pdftex.def)             Requested size: 250.95587pt x 203.89616pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
-
- []
-
-<WindowsCPU.png, id=30, 803.0pt x 652.4375pt>
-File: WindowsCPU.png Graphic file (type png)
- <use WindowsCPU.png>
-Package pdftex.def Info: WindowsCPU.png used on input line 87.
-(pdftex.def)             Requested size: 250.95587pt x 203.89616pt.
- [5 <./Profiling_windows.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+[3 <./phoronix-tests.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
-
- []
-
-<recopiladorDatos.png, id=35, 803.0pt x 652.4375pt>
-File: recopiladorDatos.png Graphic file (type png)
- <use recopiladorDatos.png>
-Package pdftex.def Info: recopiladorDatos.png used on input line 98.
-(pdftex.def)             Requested size: 250.95587pt x 203.89616pt.
-
-[6 <./WindowsCPU.png>]
-<InicioRecopiladorDatos.png, id=40, 803.0pt x 652.4375pt>
-File: InicioRecopiladorDatos.png Graphic file (type png)
-
-<use InicioRecopiladorDatos.png>
-Package pdftex.def Info: InicioRecopiladorDatos.png used on input line 107.
-(pdftex.def)             Requested size: 250.95587pt x 203.89616pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--110
-
- []
-
-<MonitorizarWindowsServicios.png, id=41, 803.0pt x 652.4375pt>
-File: MonitorizarWindowsServicios.png Graphic file (type png)
-
-<use MonitorizarWindowsServicios.png>
-Package pdftex.def Info: MonitorizarWindowsServicios.png used on input line 115
-.
-(pdftex.def)             Requested size: 250.95587pt x 203.89616pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--118
-
- []
-
-[7 <./recopiladorDatos.png> <./InicioRecopiladorDatos.png>]
-<Intervalo15seg.png, id=48, 803.0pt x 652.4375pt>
-File: Intervalo15seg.png Graphic file (type png)
- <use Intervalo15seg.png>
-Package pdftex.def Info: Intervalo15seg.png used on input line 123.
-(pdftex.def)             Requested size: 250.95587pt x 203.89616pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--126
-
- []
-
-<EscritorioLogs.png, id=49, 803.0pt x 652.4375pt>
-File: EscritorioLogs.png Graphic file (type png)
- <use EscritorioLogs.png>
-Package pdftex.def Info: EscritorioLogs.png used on input line 130.
-(pdftex.def)             Requested size: 250.95587pt x 203.89616pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--133
-
- []
-
-[8 <./MonitorizarWindowsServicios.png> <./Intervalo15seg.png>]
-<seguimiento.png, id=55, 803.0pt x 652.4375pt>
-File: seguimiento.png Graphic file (type png)
- <use seguimiento.png>
-Package pdftex.def Info: seguimiento.png used on input line 138.
-(pdftex.def)             Requested size: 250.95587pt x 203.89616pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--141
+Underfull \hbox (badness 10000) in paragraph at lines 57--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--153
-
- []
-
-[9 <./EscritorioLogs.png> <./seguimiento.png>]
-
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 154
-.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+<Ejecucion-ab.png, id=25, 689.57625pt x 621.32124pt>
+File: Ejecucion-ab.png Graphic file (type png)
+ <use Ejecucion-ab.png>
+Package pdftex.def Info: Ejecucion-ab.png used on input line 67.
+(pdftex.def)             Requested size: 292.7776pt x 263.79732pt.
+
+[4 <./Grafico_resultados_phorenix.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-<psensor.png, id=61, 803.0pt x 269.005pt>
-File: psensor.png Graphic file (type png)
- <use psensor.png>
-Package pdftex.def Info: psensor.png used on input line 162.
-(pdftex.def)             Requested size: 292.7776pt x 98.08133pt.
+<Windows-ab.png, id=29, 559.08875pt x 543.02875pt>
+File: Windows-ab.png Graphic file (type png)
+ <use Windows-ab.png>
+Package pdftex.def Info: Windows-ab.png used on input line 81.
+(pdftex.def)             Requested size: 250.95587pt x 243.74751pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 78--84
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 172.
+[5 <./Ejecucion-ab.png>] <Ubuntu-ab.png, id=33, 560.0925pt x 528.97626pt>
+File: Ubuntu-ab.png Graphic file (type png)
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 172.
- [10 <./psensor.png>]
-Overfull \hbox (59.92175pt too wide) in paragraph at lines 180--181
-[]\T1/cmr/bx/n/10.95 Visite la web del pro-yec-to y ac-ce-da a la de-mo que pro
-porcionan(http://demo.munin-
- []
+<use Ubuntu-ab.png>
+Package pdftex.def Info: Ubuntu-ab.png used on input line 89.
+(pdftex.def)             Requested size: 250.95587pt x 237.01202pt.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 86--92
 
  []
 
-<monitoring_munin_cpu.png, id=67, 500.87125pt x 379.4175pt>
-File: monitoring_munin_cpu.png Graphic file (type png)
+<CentOS-ab.png, id=34, 561.09625pt x 557.08125pt>
+File: CentOS-ab.png Graphic file (type png)
+ <use CentOS-ab.png>
+Package pdftex.def Info: CentOS-ab.png used on input line 96.
+(pdftex.def)             Requested size: 250.95587pt x 249.15417pt.
 
-<use monitoring_munin_cpu.png>
-Package pdftex.def Info: monitoring_munin_cpu.png used on input line 186.
-(pdftex.def)             Requested size: 292.7776pt x 221.79333pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
-
- []
-
-<monitorin_munin_procesos.png, id=68, 499.8675pt x 359.3425pt>
-File: monitorin_munin_procesos.png Graphic file (type png)
-
-<use monitorin_munin_procesos.png>
-Package pdftex.def Info: monitorin_munin_procesos.png used on input line 195.
-(pdftex.def)             Requested size: 292.7776pt x 210.47496pt.
- [11 <./monitoring_munin_cpu.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 93--99
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
-
- []
-
-
-Overfull \hbox (34.05653pt too wide) in paragraph at lines 209--212
-[]$\OML/cmm/m/it/10.95 wget$ $http \OT1/cmr/m/n/10.95 : \OML/cmm/m/it/10.95 ==r
-epo:zabbix:com=zabbix=\OT1/cmr/m/n/10.95 3[]0\OML/cmm/m/it/10.95 =ubuntu=pool=m
-ain=z=zabbix \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 release=zabbix$\T1/cmr
-/m/n/10.95 -
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--212
+[6 <./Windows-ab.png> <./Ubuntu-ab.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
+<Gatling_results1.png, id=38, 1219.55624pt x 698.61pt>
+File: Gatling_results1.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--214
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
-
- []
-
-[12 <./monitorin_munin_procesos.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--227
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
-
- []
-
-<zabbix1.png, id=77, 1219.55624pt x 698.61pt>
-File: zabbix1.png Graphic file (type png)
- <use zabbix1.png>
-Package pdftex.def Info: zabbix1.png used on input line 240.
-(pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
- [13]
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
-
- []
-
-<zabbix2.png, id=82, 1219.55624pt x 698.61pt>
-File: zabbix2.png Graphic file (type png)
- <use zabbix2.png>
-Package pdftex.def Info: zabbix2.png used on input line 249.
+<use Gatling_results1.png>
+Package pdftex.def Info: Gatling_results1.png used on input line 114.
 (pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
 
-<zabbix3.png, id=83, 1219.55624pt x 698.61pt>
-File: zabbix3.png Graphic file (type png)
- <use zabbix3.png>
-Package pdftex.def Info: zabbix3.png used on input line 256.
-(pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
- [14 <./zabbix1.png> <./zabbix2.png>] <zabbix4.png, id=89, 1219.55624pt x 698.6
-1pt>
-File: zabbix4.png Graphic file (type png)
-
-<use zabbix4.png>
-Package pdftex.def Info: zabbix4.png used on input line 263.
-(pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
- <zabbix5.png, id=90, 1219.55624pt x 698.61pt>
-File: zabbix5.png Graphic file (type png)
-
-<use zabbix5.png>
-Package pdftex.def Info: zabbix5.png used on input line 270.
-(pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
- [15 <./zabbix3.png> <./zabbix4.png>]
-<zabbix6.png, id=96, 1219.55624pt x 698.61pt>
-File: zabbix6.png Graphic file (type png)
- <use zabbix6.png>
-Package pdftex.def Info: zabbix6.png used on input line 277.
-(pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
-
-<zabbix7.png, id=97, 1219.55624pt x 698.61pt>
-File: zabbix7.png Graphic file (type png)
- <use zabbix7.png>
-Package pdftex.def Info: zabbix7.png used on input line 284.
-(pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
- [16 <./zabbix5.png> <./zabbix6.png>] <zabbixPORFIN.png, id=103, 1142.2675pt x 
-665.48625pt>
-File: zabbixPORFIN.png Graphic file (type png)
-
-<use zabbixPORFIN.png>
-Package pdftex.def Info: zabbixPORFIN.png used on input line 292.
-(pdftex.def)             Requested size: 292.7776pt x 170.56496pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 289--295
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
 
  []
 
-<CPUUsage.png, id=104, 1219.55624pt x 698.61pt>
-File: CPUUsage.png Graphic file (type png)
- <use CPUUsage.png>
-Package pdftex.def Info: CPUUsage.png used on input line 300.
-(pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
+[7 <./CentOS-ab.png>]
+<NumeroRequestGatling.png, id=43, 675.52374pt x 272.01625pt>
+File: NumeroRequestGatling.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--303
+<use NumeroRequestGatling.png>
+Package pdftex.def Info: NumeroRequestGatling.png used on input line 122.
+(pdftex.def)             Requested size: 292.7776pt x 117.89444pt.
 
- []
-
-[17 <./zabbix7.png> <./zabbixPORFIN.png>] [18 <./CPUUsage.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 119--125
 
  []
 
+<NumeroRespuestasGatling.png, id=44, 680.5425pt x 280.04625pt>
+File: NumeroRespuestasGatling.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--319
-
+<use NumeroRespuestasGatling.png>
+Package pdftex.def Info: NumeroRespuestasGatling.png used on input line 128.
+(pdftex.def)             Requested size: 292.7776pt x 120.47736pt.
+ [8 <./Gatling_results1.png> <./NumeroRequestGatling.png>] [9 <./NumeroRespuest
+asGatling.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+[]\T1/cmr/m/n/10.95 https://repo1.maven.org/maven2/io/gatling/highcharts/gatlin
+g-charts-highcharts-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
-
- []
-
-<pythonProgram.png, id=113, 244.915pt x 289.08pt>
-File: pythonProgram.png Graphic file (type png)
- <use pythonProgram.png>
-Package pdftex.def Info: pythonProgram.png used on input line 333.
-(pdftex.def)             Requested size: 167.29967pt x 197.47163pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 329--336
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
-
- []
-
-<python_profiling.png, id=118, 723.70375pt x 310.15875pt>
-File: python_profiling.png Graphic file (type png)
-
-<use python_profiling.png>
-Package pdftex.def Info: python_profiling.png used on input line 342.
-(pdftex.def)             Requested size: 334.60571pt x 143.40358pt.
- <mysqlProfile.png, id=119, 724.7075pt x 445.665pt>
-File: mysqlProfile.png Graphic file (type png)
-
-<use mysqlProfile.png>
-Package pdftex.def Info: mysqlProfile.png used on input line 361.
-(pdftex.def)             Requested size: 292.7776pt x 180.04451pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 357--364
-
- []
-
-[20 <./pythonProgram.png> <./python_profiling.png>]
-<mysqlProfiles.png, id=123, 724.7075pt x 590.205pt>
-File: mysqlProfiles.png Graphic file (type png)
- <use mysqlProfiles.png>
-Package pdftex.def Info: mysqlProfiles.png used on input line 368.
-(pdftex.def)             Requested size: 292.7776pt x 238.43733pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 365--371
-
- []
-
-[21 <./mysqlProfile.png>] [22 <./mysqlProfiles.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
-[]\T1/cmr/m/n/10.95 http://www.educadictos.com/herramientas-de-monitorizacion-d
-e-hardware-para-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
-[]\T1/cmr/m/n/10.95 http://hardzone.es/programas-para-testear-monitorizar-y-com
-probar-el-
- []
-
-
-Overfull \hbox (43.62302pt too wide) in paragraph at lines 387--388
-[]\T1/cmr/m/n/10.95 https://debian-administration.org/article/352/Using_strace_
-to_debug_application_errors 
- []
-
-
-Overfull \hbox (32.67004pt too wide) in paragraph at lines 390--391
-[]\T1/cmr/m/n/10.95 https://www.zabbix.com/documentation/3.0/manual/installatio
-n/install_from_packages 
- []
-
-[23] (./MemoriaPractica3.aux
+[10] (./MemoriaPractica4.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5168 strings out of 493304
- 73054 string characters out of 6139871
- 182855 words of memory out of 5000000
- 8494 multiletter control sequences out of 15000+600000
- 20050 words of font info for 55 fonts, out of 8000000 for 9000
+ 5025 strings out of 493304
+ 70605 string characters out of 6139871
+ 180636 words of memory out of 5000000
+ 8372 multiletter control sequences out of 15000+600000
+ 18520 words of font info for 53 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 46i,11n,47p,1461b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,10n,47p,877b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1
-095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1095.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm14
-40.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sfsx1095.pfb></usr/share/texmf/fonts/type1/pub
-lic/cm-super/sfsx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx144
-0.pfb>
-Output written on MemoriaPractica3.pdf (23 pages, 1836210 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfcc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfsx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfsx1440.pfb>
+Output written on MemoriaPractica4.pdf (10 pages, 661701 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 86 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,11 @@
+1) Instalar phoronix-test-suites
+  para listar:
+    ... list-available-tests
+
+    Hay que hacer algo con esto:
+      /usr/share/phoronix-test-suite/pts-core/external-test-dependences/scripts/install-ubuntu-packages.sh
+      Cambiar algo por otro algo.
+
+  Instalar tests:
+    phoronix-test-suite install <nombre-test>
+  Ejecutarlo  "         run    "

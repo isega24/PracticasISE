@@ -67,6 +67,7 @@
 
 	
 \end{itemize}
+\newpage
 \section{Monitorización con Windows.}
 \begin{itemize}
 		\item \textbf{Ejecute el monitor de “System Performance” y muestre el resultado. Incluya capturas de pantalla comentando la información que aparece.}\\
@@ -285,11 +286,30 @@
 	\label{fig:zabbix7}
 	\end{figure}
 	
+	Una vez nos registramos, nos aparece la siguiente interfaz:\\
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{zabbixPORFIN}
+	\caption[Interfaz zabbix]{Interfaz general de zabbix.}
+	\label{fig:zabbixPORFIN}
+	\end{figure}
+	
+	Ahora, para monitorizar un  servicio nos vamos a la sección Graphs y seleccionamos algún servicio. Por ejemplo:\\
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{CPUUsage}
+	\caption[Uso de CPU]{Gráfico que muestra el porcentaje de uso de la CPU de nuestro servidor.}
+	\label{fig:CPUUsage}
+	\end{figure}
+	Así por ejemplo vemos en verde el porcentaje de CPU no usado, en azul el usado por parte del usuario y en rojo, el porcentaje usado por el sistema en cada momento de la última hora(en realidad menos por ser inicializado hace menos de una hora).
+
+
+	
 	
 	 
 \end{itemize}
 
-
+\newpage
 \subsection{Monitorizando un servicio}
 \begin{itemize}
 	\item \textbf{Escriba un breve resumen sobre alguno de los artículos donde se muestra
@@ -304,6 +324,7 @@
 \end{itemize}
 
 \section{Profiling}
+	\subsection{Python}
 	\begin{itemize}
 		\item \textbf{Escriba un script en python y analice su comportamiento usando el profiler presentado.}\\
 		Utilizando cProfile\cite{python} como profiler para analizar el comportamiento de el siguiente script:\\

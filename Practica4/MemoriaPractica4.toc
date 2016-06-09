@@ -1,0 +1,6 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Benchmarks populares}{3}
+\contentsline {subsection}{\numberline {1.1}Phoronis suite}{3}
+\contentsline {subsection}{\numberline {1.2}Tests de estr\IeC {\'e}s para Webs.}{4}
+\contentsline {subsubsection}{\numberline {1.2.1}Apache Benchmarck}{4}
+\contentsline {subsubsection}{\numberline {1.2.2}Gatling}{7}
