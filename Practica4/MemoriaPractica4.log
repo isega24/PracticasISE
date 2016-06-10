@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  5 JUN 2016 23:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  10 JUN 2016 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -712,37 +712,192 @@ File: NumeroRespuestasGatling.png Graphic file (type png)
 <use NumeroRespuestasGatling.png>
 Package pdftex.def Info: NumeroRespuestasGatling.png used on input line 128.
 (pdftex.def)             Requested size: 292.7776pt x 120.47736pt.
- [8 <./Gatling_results1.png> <./NumeroRequestGatling.png>] [9 <./NumeroRespuest
-asGatling.png>]
+ [8 <./Gatling_results1.png> <./NumeroRequestGatling.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+[9 <./NumeroRespuestasGatling.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 150.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 150.
+
+<Gatling-Jmeter-Net.png, id=52, 749.80125pt x 357.335pt>
+File: Gatling-Jmeter-Net.png Graphic file (type png)
+
+<use Gatling-Jmeter-Net.png>
+Package pdftex.def Info: Gatling-Jmeter-Net.png used on input line 154.
+(pdftex.def)             Requested size: 292.7776pt x 139.52911pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--157
+
+ []
+
+<UsoCPU-JmeterGatling.png, id=53, 750.805pt x 356.33125pt>
+File: UsoCPU-JmeterGatling.png Graphic file (type png)
+
+<use UsoCPU-JmeterGatling.png>
+Package pdftex.def Info: UsoCPU-JmeterGatling.png used on input line 164.
+(pdftex.def)             Requested size: 292.7776pt x 138.9523pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--167
+
+ []
+
+[10 <./Gatling-Jmeter-Net.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+
+ []
+
+<ThreadGroup.png, id=58, 1219.55624pt x 698.61pt>
+File: ThreadGroup.png Graphic file (type png)
+ <use ThreadGroup.png>
+Package pdftex.def Info: ThreadGroup.png used on input line 188.
+(pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--191
+
+ []
+
+[11 <./UsoCPU-JmeterGatling.png>]
+<JmeterThreadGroup.png, id=62, 973.6375pt x 586.19pt>
+File: JmeterThreadGroup.png Graphic file (type png)
+
+<use JmeterThreadGroup.png>
+Package pdftex.def Info: JmeterThreadGroup.png used on input line 196.
+(pdftex.def)             Requested size: 292.7776pt x 176.2698pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
+
+ []
+
+[12 <./ThreadGroup.png> <./JmeterThreadGroup.png>]
+<HTTPPorDefecto.png, id=67, 1093.08376pt x 586.19pt>
+File: HTTPPorDefecto.png Graphic file (type png)
+ <use HTTPPorDefecto.png>
+Package pdftex.def Info: HTTPPorDefecto.png used on input line 205.
+(pdftex.def)             Requested size: 292.7776pt x 157.00328pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+<PeticionHTTP.png, id=68, 1095.09125pt x 583.17876pt>
+File: PeticionHTTP.png Graphic file (type png)
+ <use PeticionHTTP.png>
+Package pdftex.def Info: PeticionHTTP.png used on input line 216.
+(pdftex.def)             Requested size: 292.7776pt x 155.91202pt.
+
+<GraficosJmeter.png, id=69, 977.6525pt x 589.20125pt>
+File: GraficosJmeter.png Graphic file (type png)
+ <use GraficosJmeter.png>
+Package pdftex.def Info: GraficosJmeter.png used on input line 224.
+(pdftex.def)             Requested size: 292.7776pt x 176.44707pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--227
+
+ []
+
+[13 <./HTTPPorDefecto.png> <./PeticionHTTP.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+
+ []
+
+<GraficoJmeter.png, id=74, 837.1275pt x 442.65375pt>
+File: GraficoJmeter.png Graphic file (type png)
+ <use GraficoJmeter.png>
+Package pdftex.def Info: GraficoJmeter.png used on input line 233.
+(pdftex.def)             Requested size: 292.7776pt x 154.80954pt.
+
+[14 <./GraficosJmeter.png> <./GraficoJmeter.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
 []\T1/cmr/m/n/10.95 https://repo1.maven.org/maven2/io/gatling/highcharts/gatlin
 g-charts-highcharts-
  []
 
-[10] (./MemoriaPractica4.aux
+[16] (./MemoriaPractica4.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5025 strings out of 493304
- 70605 string characters out of 6139871
- 180636 words of memory out of 5000000
- 8372 multiletter control sequences out of 15000+600000
+ 5113 strings out of 493304
+ 72277 string characters out of 6139871
+ 181753 words of memory out of 5000000
+ 8449 multiletter control sequences out of 15000+600000
  18520 words of font info for 53 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 46i,10n,47p,877b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,11n,47p,877b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf/fonts
-/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfcc1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfsx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr
-/share/texmf/fonts/type1/public/cm-super/sfsx1440.pfb>
-Output written on MemoriaPractica4.pdf (10 pages, 661701 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1
+/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfc
+c1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/shar
+e/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx
+1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfsx1440.pfb>
+Output written on MemoriaPractica4.pdf (16 pages, 1127962 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

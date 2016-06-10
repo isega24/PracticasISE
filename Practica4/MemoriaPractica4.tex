@@ -148,14 +148,121 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 	
 	\begin{itemize}
 		\item Para empezar, la media que calculaba cada uno de los tests era muy parecida, al igual que la desviación típica, por tanto podemos coincidir en que se obtienen casi los mismos resultados con ambos testers.
-		\item
-		\item
-		\item
-		\item
-		\item
+		\item En cuanto a uso de red, cabe notar que Gatling no guarda información sobre el tamaño de la respuesta. Sin embargo, flood.io usa una estimación basándose en las cabeceras. Aun así, la estimación es optimista. El siguiente, es un gráfico del uso de cada herramienta de la red:\\
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{Gatling-Jmeter-Net}
+			\caption[Uso de red]{Uso de red de Gatling y las dos versiones de Jmeter.}
+			\label{fig:Gatling-Jmeter-Net}
+		\end{figure}
+
+		\item Jmeter usa más recursos en la máquina virtual de Java.
+		
+		\item Jmeter usa más la CPU y más memoria. El siguiente gráfico el porcentaje de utilización de la CPU:\\
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{UsoCPU-JmeterGatling}
+			\caption[Uso CPU]{Uso de la CPU de Gatling y ambas versiones de Jmeter}
+			\label{fig:UsoCPU-JmeterGatling}
+		\end{figure}
+
+		\item Ambas herramientas tienen tiempos de respuesta muy parecidos(desviación típica muy pequeña), lo cual, según el artículo, este parámetro no tiene por qué tenerse en cuenta en los tiempos 
+		\item Ambas herramientas se mantienen estables en el momento en el que reciben 30.000 peticiones por minuto.
+		\item Ambas herramientas pueden aguantar a 10.000 usuarios concurrentemente, lo cual se suele considerar una cantidad agresiva.
 	\end{itemize}
 	
-	 
+	Resumiendo, ambas herramientas son muy parecidas, salvo en pequeñas diferencias, como son la medición de uso de red(que Gatling no hace, pero es fácil de medir con otro tester) y el uso de CPU(Jmeter usa ligeramente más). La conclusión es que el uso de una u otra herramienta termina siendo una cuestión subjetiva que dependerá del usuario de las mismas.
+	
+	
+	\item \textbf{Instale y siga el tutorial en \cite{Jmeter} realizando capturas de pantalla y comentándolas. En vez de usar la web de jmeter, haga el experimento usando alguna de sus máquinas virtuales (Puede hacer una página sencilla, usar las páginas de phpmyadmin, instalar un CMS, etc.).}\\
+	
+	Para empezar, vamos a instalar Jmeter. Para ello, simplemente tendremos que descargar el archivo comprimido que se descarga de la misma página \cite{Jmeter} y descomprimirlo. Tras verificar que tenemos los requerimientos necesarios \cite{Jmeter2}, vamos al manual para crear test para páginas web \cite{Jmeter3}.\\
+	
+	
+	Nuestro test consistirá en crear cinco usuarios que mandarán peticiones a páginas web. Por último, para poder crear estos test de páginas web vamos a necesitar cuatro elementos principales: Thread Group, HTTP Request, HTTP Request Defaults, y Graph Results.\\
+	
+	\begin{itemize}
+		\item Para el primer elemento(Thread Group) vamos a ir a la interfaz para crear un grupo de hilos:\\
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{ThreadGroup}
+			\caption[Pestaña]{Pestaña donde se encuentra la interfaz para crear el grupo de hilos.}
+			\label{fig:ThreadGroup}
+		\end{figure}
+		
+		Luego, en la interfaz, vamos a modificar algunos valores por defecto. El número de hilos lo modificamos a 5. Además, el numero de repeticiones que vamos a exigir es de 2. Así debería quedar:\\
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{JmeterThreadGroup}
+			\caption[Jmeter thread group]{Configuración de Jmeter deseada.}
+			\label{fig:JmeterThreadGroup}
+		\end{figure}
+		
+		\item Ahora vamos a crear los valores por defecto de las peticiones que se harán. Para ello, clicamos con el botón derecho sobre el grupo de hilos creado -> Configuración por defecto -> Valores por defecto para configuración HTTP. Nosotros solo modificaremos el campo IP y el puerto, a la máquina que queramos testear. En nuestro caso, a la máquina con IP 10.0.2.15, al puerto 80. Aquí se ven los cambios realizados:\\
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{HTTPPorDefecto}
+			\caption[Valores por defecto HTTP]{Valores por defecto modificados en Jmeter}
+			\label{fig:HTTPPorDefecto}
+		\end{figure}
+		
+		Jmeter también nos da la opción de incluir Cookies, pero como nuestra página no las usa, nos saltaremos este paso de la guía.
+		
+		\item Con el objeto creado anteriormente solo hemos modificado los valores por defecto, pero no habremos mandado ninguna petición. Ahora si vamos a crear la propia petición. Para ello, clicamos con el botón derecho sobre nuestro grupo de hilos y le damos a Añadir->Muestreador->Petición HTTP. En ella lo único que necesitaremos cambiar es el nombre, si queremos, y la ruta. No necesitamos especificar la ruta del servidor, ya que ya la tenemos configurada en las opciones por defecto. Así quedaría la petición HTTP:\\
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{PeticionHTTP}
+			\caption[Petición HTTP]{Valores modificados de la petición HTTP.}
+			\label{fig:PeticionHTTP}
+		\end{figure}
+		
+		\item Por último, tenemos que añadir un elemento que escuche. Este elemento será el responsable de mostrar los resultados de la ejecución de Jmeter, que en nuestro caso será un gráfico. Para ello, clicamos de nuevo enel grupo de hilos y vamos a Añadir->Receptor->Grafico de Resultados. Tras esto, debemos especificar el nombre del archivo al que se volcarán los resultados. Esta es la interfaz que ofrece:\\
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{GraficosJmeter}
+			\caption[Interfaz Gráficos]{Interfaz que ofrece Jmeter para creación de gráficos.}
+			\label{fig:GráficosJmeter}
+		\end{figure}
+		
+		Tras esto, ejecutamos varias veces el test y este es el gráfico que nos queda:\\
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{GraficoJmeter}
+			\caption[Grafico Jmeter]{Resultados de la ejecución de Jmeter}
+			\label{fig:GraficoJmeter}
+		\end{figure}
+		
+		En la parte de abajo del gráfico, vemos valores clave del mismo gráfico, entre ellos la media y la mediada. Según estos, la mitad de las peticiones, que han sido 700, se han llevado a cabo en un tiempo menor a 4 ms, con una media total de 6ms. También vemos en la gráfica que las primeras peticiones tardaban más, pero que al final el tiempo de respuesta y todos los parámetros que en el intervienen se estabilizan.
+
+	\end{itemize}
+	
+	\subsection{Benchmark}
+	En esta última parte de la memoria, tenemos que programar un benchmark e incluir el objetivo del mismo, que unidades, variables o puntuaciones utilizará, instrucciones de uso y un ejemplo en el que se analizen los resultados.\\
+	
+	Para la realización del benchmark se ha consultado el benchmark publicado el año pasado por el compañero de clase Oscar \cite{oscar} y se ha modificado. A continuación se explican los campos que se requieren:\\
+	
+	\begin{itemize}
+		\item Para comenzar, el Benchmark pretende medir los MFLOPS del computador en el que se ejecuten. Para ello, la rutina que ejecutará será la de invertir una matriz de dimensión 1000 aleatoria por el método de descomposición LU y se calcularán las operaciones en coma flotante necesarias para ella. Se medirá el tiempo necesario en la inversión y, a partir de los datos de tiempo y número de operaciones, se calculñarán los MFLOPS.
+		\item Para que el benchmark sea más homogeneo, este calculo se hará 5 veces y se calculará la media. 
+		
+		\item La forma de ejecución de este Benchmark será simplemente ejecutar el script benchmark.sh, que sacará por pantalla el número de MFLOPS del computador. El funcionamiento de este script es el siguiente: primero compila los programas necesarios para la ejecución(el que invierte la matriz y el que calcula la media de los datos). Tras esto, llama y guarda los resultados de la ejecución del programa que calcula la inversa de la matriz las cinco veces dichas anteriormente. Tras esto, calcula la media de estos valores y lo muestra en pantalla.
+	\end{itemize}
+	
+	Se pasa ahora a analizar los resultados de ejecutar el script en varias computadoras:\\
+	
+	\begin{center}
+		\begin{tabular}{| l || r | }
+			\hline
+			Procesador & MFLOPS\\ \hline \hline
+			Intel® Core™ i7-3630QM CPU @ 2.40GHz × 8  & 497.205 \\ \hline
+			7 & 9 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	
 \end{itemize}
 
 
@@ -168,8 +275,13 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 	\bibitem{scala} http://www.scala-lang.org/
 	\bibitem{gatling} http://gatling.io/docs/2.2.1/quickstart.html
 	\bibitem{benchmarkingJmGt} https://blog.flood.io/benchmarking-jmeter-and-gatling/
+	\bibitem{Jmeter} http://jmeter.apache.org/download\_jmeter.cgi
+	\bibitem{Jmeter2} http://jmeter.apache.org/usermanual/get-started.html
+	\bibitem{Jmeter3} http://jmeter.apache.org/usermanual/build-web-test-plan.html
+	\bibitem{oscar} https://github.com/oxcar103/Benchmark-103
 	\bibitem{necesario}
 	https://repo1.maven.org/maven2/io/gatling/highcharts/gatling-charts-highcharts-bundle/2.1.7/gatling-charts-highcharts-bundle-2.1.7-bundle.zip
+	
 	
 \end{thebibliography}
 \end{document}
