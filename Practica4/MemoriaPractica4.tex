@@ -146,7 +146,35 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 	\item \textbf{¿Qué es Scala? Instale Gatling y pruebe los escenarios por defecto.}\\
 	Scala \cite{scala} es un lenguaje de programación que usa los conceptos de orientación a objetos y los conceptos funcionales, formando un lenguaje multiparadigma. Está diseñado para expresar patrones de programación y es altamente tipado.\\
 	
-	Tras esta explicación, veamos ahora cómo usar la herramienta gatling, que usa Scala para crear sus tests, para estresar el sistema. Según la guia de inicio rápido suministrada por el proyecto gatling \cite{gatling}, para instalar el programa simplemente hay que descomprimir un archivo que te descargas de la misma página para tener el programa en funcionamiento. En el directorio $./bin$ se encuentran los ejecutables de la aplicación. Para correr la aplicación, ejecutamos $./bin/gatling.sh$(en Linux) y nos saldrá una muestra de los tests de ejemplo. El que nosotros ejecutaremos será el test básico. Al terminar, nos dirá que para ver los resultados abramos un link creado en el directorio $./results$. Una de las tablas que crea gatling es la siguiente, donde muestra lo que tarda el sistema en responder a una query de la base de datos.\\
+	Tras esta explicación, veamos ahora cómo usar la herramienta gatling, que usa Scala para crear sus tests, para estresar el sistema. Según la guia de inicio rápido suministrada por el proyecto gatling\cite{gatling}, para instalar el programa simplemente hay que descomprimir un archivo que te descargas de la misma página para tener el programa en funcionamiento. Sin embargo, nosotros vamos a utilizar un paquete que se nos suministra, citado en \cite{gatling2}, que contiene las mismas funcionalidades. En el directorio $./bin$ se encuentran los ejecutables de la aplicación. Para correr la aplicación, ejecutamos $./bin/gatling.sh$(en Linux) y nos saldrá una muestra de los tests de ejemplo. El que nosotros ejecutaremos será el test básico. Al terminar, nos dirá que para ver los resultados abramos un link creado en el directorio $./results$. Una de las tablas que crea gatling es la siguiente, donde muestra lo que tarda el sistema en responder a una query de la base de datos. Estos son los distintos datos que recogen:\\
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{Ejemplo_Ejecucion}
+		\caption[Ejemplo ejecución]{Ejemplo de ejecución del tester básico}
+		\label{fig:Ejemplo_Ejecucion}
+	\end{figure}
+	
+	Para comenzar, cada cierto tiempo nos muestra información de como está transcurriendo el test, con datos como el número de respuestas bien recibidas(OK). Al finalizar, se nos mostrará por pantalla el resultado completo, como en la siguiente imagen:\\
+	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{globalInformationConsola}
+		\caption[global Information Consola]{Información que saca Gatling por pantalla tras su ejecución.}
+		\label{fig:globalInformationConsola}
+	\end{figure}
+	 
+	en la que se nos informa de datos relevantes como algunos percentiles relevantes y los tiempos mínimo y máximo de respuesta. También reparten las peticiones en intervalos de tiempo. Si queremos ver gráficamente estos datos, tendremos que abrir el archivo $index.html$ alojado en un directorio creado para nuestro test en $./results$. Los gráficos que allí se muestran son los siguientes entre otros:\\
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{distribucion-respuestas}
+		\caption[Distribución respuestas]{Distribución seguida por los tiempos de respuesta de las peticiones}
+		\label{fig:distribucion-respuestas}
+	\end{figure}
+	 En éste se muestra la distribución de las respuestas en el tiempo de la prueba. Las dos barras más largas muestran que en esos momentos se respondieron el doble de respuestas que en las otras, que sabiendo que solo se realizaron 13 peticiones, son dos respuestas.
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{Gatling_results1}
@@ -154,19 +182,25 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 		\label{fig:Gatling_results1}
 	\end{figure}
 	
-	Y aquí los gráficos generados:\\
+	En esta tabla se muestran los porcentajes, los tiempos y los percentiles de todas las respuestas.  Así por ejemplo, vemos que la respuesta que tardó más tiempo fue la novena, y que la desviación típica en ms es de 388ms.
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{NumeroRequestGatling}
 		\caption[Peticiones por segundo]{Gráfico que muestra el número de peticiones por segundo en el transcurso del test.}
 		\label{fig:NumeroRequestGatling}
 	\end{figure}
+	
+	En este gráfico se muestra el número de peticiones por segundo y el número de usuarios activos(que en nuestro caso solo seremos nosotros). Sólo al principio se tuvo un promedio de dos peticiones por segundo.
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{NumeroRespuestasGatling}
 		\caption[Respuestas gatling]{Gráfico que muestra el número de respuestas por segundo en el transcurso del test.}
 		\label{fig:NumeroRespuestasGatling}
 	\end{figure}
+	
+	Este último gráfico muestra el número de respuestas por segundo y el número de usuarios activos también. Varía del anterior en poca cosa, ya que son las respuestas a las peticiones representadas arriba. 
 	
 \end{itemize}
 \subsubsection{Jmeter}
@@ -325,7 +359,7 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 	\bibitem{Jmeter2} http://jmeter.apache.org/usermanual/get-started.html
 	\bibitem{Jmeter3} http://jmeter.apache.org/usermanual/build-web-test-plan.html
 	\bibitem{oscar} https://github.com/oxcar103/Benchmark-103
-	\bibitem{necesario}
+	\bibitem{gatling2}
 	https://repo1.maven.org/maven2/io/gatling/highcharts/gatling-charts-highcharts-bundle/2.1.7/gatling-charts-highcharts-bundle-2.1.7-bundle.zip
 	
 	
