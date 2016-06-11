@@ -12,7 +12,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
-//Este es el número de operaciones necesarias en una matriz de dimensión 1000 
+//Este es el número de operaciones necesarias en una matriz de dimensión 1000
 const long long operaciones = 2668664000;
 using namespace std;
 void invermat(int n, double **a, double **ainv, double &determ, struct timeval &diff) {

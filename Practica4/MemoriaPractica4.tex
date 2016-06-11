@@ -24,27 +24,39 @@
 
 \section{Benchmarks populares}
 
-\subsection{Phoronis suite}
+\subsection{Phoronix tests suites}
 
 \begin{itemize}
 	\item \textbf{Instale la aplicación. ¿Qué comando permite listar los benchmarks disponibles?}\\
+	Para instalar phoronix, en la página oficial nos recomiendan descargar el paquete .deb e instalarlo a partir del mismo\cite{phoronix-inst}.\\
 	Según la documentación de phoronix \cite{phoronix}, el comando para ver que benchmarks hay disponibles es el siguiente:\\
-	$phoronix$-$test$-$suite$ list-available-tests\\
+	$phoronix$-$test$-$suite$ $list$-$available$-$tests$\\
 	Algunos de los tests que están disponibles son los siguientes:\\
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{phoronix-tests}
-		\caption[phoronix-tests]{Lista de los benchmarks que tiene disponible phoronix}
+		\caption[phoronix-tests]{Lista de parte de los benchmarks que tiene disponible phoronix}
 		\label{fig:phoronix-tests}
 	\end{figure}
 	
 	\item \textbf{Seleccione, instale y ejecute uno, comente los resultados.}\\
-	El benchmark que hemos descargado es el que mide el uso de batería: $battery$-$power$-$usage$. Para instalarlo, ejecutamos el comando $install$ de phoronix. Para ejecutarlo utilizamos el comando $run$. Al ejecutarlo, se nos dice con que nombre queremos que se guarden los resultados. Tras esto, ejecuta el benchmark seleccionado. En nuestro caso, el benchmark mide el uso de la batería en sin hacer nada, con la pantalla apagada y reproduciendo un video. La gráfica que muestro el uso que ha hecho nuestro computador durante el mismo es el siguiente:\\
+	El benchmark que hemos descargado es el que mide el uso de batería: $battery$-$power$-$usage$. Para instalarlo, ejecutamos el comando $install$ de phoronix. Para ejecutarlo utilizamos el comando $run$. Al ejecutarlo, se nos dice con que nombre queremos que se guarden los resultados. Tras esto, ejecuta el benchmark seleccionado. En nuestro caso, el benchmark mide el uso de la batería sin hacer nada pero con la pantalla encendida, con la pantalla apagada y reproduciendo un video, por lo que intuimos que está enfocado a ver cuanto usa la GPU la batería. Tras la ejecución del mismo, nos preguntan que si queremos ver información del benchmark, en la que se incluye la gráfica que muestra el uso que ha hecho nuestro computador durante el mismo:\\
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{Grafico_resultados_phorenix}
 		\caption[Grafico benchmark]{Gráfica que muestra el uso de batería durante el benchmark en MiliWatios.}
 		\label{fig:Grafico_resultados_phorenix}
+	\end{figure}
+	
+	La primera parte del gráfico hace referencia a la parte en la que el computador tenía la pantalla encendida sin hacer nada. Hay un pico al iniciarse esta etapa pero supongo que será por la iniciación del test. Después el uso de batería decrece, lo que quiere decir que corresponde a la parte del benchmark en la que la pantalla permanecía apagada. Tras esto, crece abruptamente, lo que quiere decir que comienza la parte en la que se está reproduciendo un vídeo. \\
+	
+	Para obtener la información que recoge el benchmark directamente podemos ejecutar los distintos comandos $result$-$file$-$to$-... En este caso, ejecutaremos el que nos lo muestro en texto. Esta es la salida:\\
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{resultados_phoronix}
+		\caption[resultados\_phoronix]{Información sobre el test extendida.}
+		\label{fig:resultados_phoronix}
 	\end{figure}
 
 
@@ -55,10 +67,11 @@
 En este apartado vamos a responder las preguntas relacionadas con Apache Benchmark(comando ab).\\
 \begin{itemize}
 	\item \textbf{De los parámetros que le podemos pasar al comando ¿Qué significa -c 5 ? ¿y -n 100? Monitorice la ejecución de ab contra alguna máquina (cualquiera) ¿Cuántos procesos o hebras crea ab en el cliente?}\\
-	Según la documentación oficial de Apache(la reference al comando ab) \cite{ab}, la opción -$n$ $request$ fija el número de peticiones que se harán al servidor de apache a $request$. La opción -c, a su vez, fija el número de peticiones concurrentes que dejaremos hacer al cliente. \\
+	Según la documentación oficial de Apache(la reference al comando ab) \cite{ab}, la opción -$n$ $request$ fija el número de peticiones que se harán al servidor de apache a $request$. La opción -$c$ $concurrency$, a su vez, fija el número de peticiones concurrentes que dejaremos hacer al cliente. \\
+	
 	Tras esta explicación, vayamos ahora a monitorizar un equipo. Para ello, desde la máquina cliente ejecutamos el siguiente comando para bombardear a peticiones nuestro servidor:\\
 	
-	ab -n 1000 -c 10 http://10.0.2.6/\\
+	ab -n 1000 -c 10 http://<server IP>/\\
 	
 	el cual envía 1000 peticiones a través de 10 hebras paralelas(peticiones concurrentes). Este es el resultado de nuestro Benchmarking:\\
 	
@@ -69,7 +82,18 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 		\label{fig:Ejecucion-ab}
 	\end{figure}
 	
-	Estos resultados nos resumen cuanto ha tardado el servidor en atender a cada petición. A primera vista, nos llama la atención que la diferencia entre el máximo y el mínimo tiempo tardado en dar respuesta a las peticiones es muy grande(90 ms). Si nos fijamos en las últimas filas de la terminal, nos damos cuenta que esto es por la existencia de casos extremos, en los que solo el 1\% de las peticiones ha tardado entre 90 y 22 ms. Todas las demás no han llegado a tardar 22 ms.
+	Estos resultados nos resumen cuanto ha tardado el servidor en atender a cada petición. A primera vista, nos llama la atención que la diferencia entre el máximo y el mínimo tiempo tardado en dar respuesta a las peticiones es muy grande(90 ms). Si nos fijamos en las últimas filas de la terminal, nos damos cuenta que esto es por la existencia de casos extremos, en los que solo el 1\% de las peticiones ha tardado entre 90 y 22 ms. Todas las demás no han llegado a tardar 22 ms.\\
+	
+	Para ver el número de hebras que crea ab en el cliente, vamos a ejecutar $ps$ -$eLf$, que con estas opciones muestra información de las hebras creadas\cite{ps}, tras mandar las peticiones. Para filtrar la búsqueda del proceso, volcaremos el resultado y lo filtraremos con grep ab. Tras este proceso, vemos la siguiente salida:\\
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{grepAB}
+		\caption[grepAB]{Resultado de ejecutar ps -eLf | grep ab en el momento en el que estaba ejecutandose ab}
+		\label{fig:grepAB}
+	\end{figure}
+	Es claro que la linea que buscamos es la quinta linea.El formato que sigue la salida de ps -eLf es el siguiente: UID(ID del usuario), PID(ID del proceso), PPID(permisos), LWP(ID de la hebra), C (), NLWP(Número de hebras)...(No cito más puesto que solo nos interesa el número de hebras creadas). Así que la columna sexta nos dirá el número de hebras que se crean en el cliente, que en este caso es solo una.
+
 	
 	\item \textbf{Ejecute ab contra las tres máquinas virtuales (desde el SO anfitrión a las máquina virtuales de la red local, en Ubuntu, CentOS y WS) una a una (arrancadas por separado) y muestre y comente las estadísticas. ¿Cuál es la que proporciona mejores resultados? Fíjese en el número de bytes transferidos, ¿es igual para cada máquina?}\\
 	
@@ -98,17 +122,31 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 		\label{fig:Centos-ab}
 	\end{figure}
 	
-	En cada informe, nos dice la cantidad de información que se envía. En este caso, Ubuntu manda mucha información(11.510B de información), Windows envía sólo 689B de información y CentOs, 4.897B. Esto desencadena en que, obviamente, la velocidad que tardará Ubuntu en servir la página será mayor que las otras dos distribuciones, ya que la página en cuestión es más pesada.\\
-	Como venimos anunciando, Ubuntu ha tardado más en servir las 1000 peticiones(0.724 seg), seguido muy de cerca, sorprendentemente, por Windows(0.559 seg). CentOS, por el contrario, ha tardado sólo 0.097 seg.\\
+	En cada informe nos muestra la cantidad de información que se envía. En este caso, Ubuntu manda mucha información(11.510B de información), Windows envía sólo 689B de información y CentOs, 4.897B. Esto desencadena en que, obviamente, la velocidad que tardará Ubuntu en servir la página será mayor que las otras dos distribuciones, ya que la página en cuestión es más pesada.\\
+	Como venimos anunciando, Ubuntu ha tardado más en servir las 1000 peticiones(0.724 seg), seguido muy de cerca, sorprendentemente, por Windows(0.559 seg). CentOS ha tardado 0.697 seg.\\
 	
+	Por tanto, la relación entre bytes servidos y tiempo de media en servirlos quedaría así:\\
 	
+	\begin{center}
+		\begin{tabular}{| l || r | }
+			\hline
+			Máquina & Bytes/ms\\ \hline \hline
+			Windows  & 137 \\ \hline
+			Ubuntu & 1644 \\ \hline
+			CentOS & 699 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	Si nos fijásemos solo en estos resultados, parece que lo que ha tardado Ubuntu se debe única y exclusivamente a la cantidad de información que manda. Sin embargo, ya que aparte de mandar información también se realizan otras operaciones que no están tenidas en cuenta en el tiempo medio de respuesta, no podemos concluir que ninguna máquina se comporte mejor o peor realmente.
 \end{itemize}
 
 \subsubsection{Gatling}
 \begin{itemize}
 	\item \textbf{¿Qué es Scala? Instale Gatling y pruebe los escenarios por defecto.}\\
-	Scala \cite{scala} es un lenguaje de programación que use los conceptos de orientación a objetos y los funcionales, formando un lenguaje multiparadigma. Está diseñado para expresar patrones de programación y es altamente tipado.\\
-	Tras esta explicación, veamos ahora cómo usar la herramienta gatling para estresar el sistema. Según la guia de inicio rápido suministrada por el proyecto gatling \cite{gatling}, para instalar el programa simplemente hay que descomprimir un archivo que te descargas de la misma página para tener el programa en funcionamiento. En el directorio $./bin$ se encuentran los ejecutables de la aplicación. Para correr la aplicación, ejecutamos el ejecutable $./bin/gatling.sh$(en Linux) y nos saldrá una muestra de los tests de ejemplo. El que nosotros ejecutaremos será el test básico. Al terminar, nos dirá que para ver los resultados abramos un link creado en el directorio $./results$. Una de las tablas que crea gatling es la siguiente, donde muestra lo que tarda el sistema en responder a una query de la base de datos.\\
+	Scala \cite{scala} es un lenguaje de programación que usa los conceptos de orientación a objetos y los conceptos funcionales, formando un lenguaje multiparadigma. Está diseñado para expresar patrones de programación y es altamente tipado.\\
+	
+	Tras esta explicación, veamos ahora cómo usar la herramienta gatling, que usa Scala para crear sus tests, para estresar el sistema. Según la guia de inicio rápido suministrada por el proyecto gatling \cite{gatling}, para instalar el programa simplemente hay que descomprimir un archivo que te descargas de la misma página para tener el programa en funcionamiento. En el directorio $./bin$ se encuentran los ejecutables de la aplicación. Para correr la aplicación, ejecutamos $./bin/gatling.sh$(en Linux) y nos saldrá una muestra de los tests de ejemplo. El que nosotros ejecutaremos será el test básico. Al terminar, nos dirá que para ver los resultados abramos un link creado en el directorio $./results$. Una de las tablas que crea gatling es la siguiente, donde muestra lo que tarda el sistema en responder a una query de la base de datos.\\
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{Gatling_results1}
@@ -158,7 +196,7 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 
 		\item Jmeter usa más recursos en la máquina virtual de Java.
 		
-		\item Jmeter usa más la CPU y más memoria. El siguiente gráfico el porcentaje de utilización de la CPU:\\
+		\item Jmeter usa más la CPU y más memoria. El siguiente gráfico muestra el porcentaje de utilización de la CPU:\\
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.7\linewidth]{UsoCPU-JmeterGatling}
@@ -171,15 +209,14 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 		\item Ambas herramientas pueden aguantar a 10.000 usuarios concurrentemente, lo cual se suele considerar una cantidad agresiva.
 	\end{itemize}
 	
-	Resumiendo, ambas herramientas son muy parecidas, salvo en pequeñas diferencias, como son la medición de uso de red(que Gatling no hace, pero es fácil de medir con otro tester) y el uso de CPU(Jmeter usa ligeramente más). La conclusión es que el uso de una u otra herramienta termina siendo una cuestión subjetiva que dependerá del usuario de las mismas.
+	Resumiendo, ambas herramientas son muy parecidas, salvo en pequeñas diferencias, como son la medición de uso de red(que Gatling no hace, pero es fácil de medir con otro tester) y el uso de CPU(Jmeter usa ligeramente más). La conclusión es que el uso de una u otra herramienta termina siendo una cuestión subjetiva que dependerá del usuario.
 	
 	
 	\item \textbf{Instale y siga el tutorial en \cite{Jmeter} realizando capturas de pantalla y comentándolas. En vez de usar la web de jmeter, haga el experimento usando alguna de sus máquinas virtuales (Puede hacer una página sencilla, usar las páginas de phpmyadmin, instalar un CMS, etc.).}\\
 	
 	Para empezar, vamos a instalar Jmeter. Para ello, simplemente tendremos que descargar el archivo comprimido que se descarga de la misma página \cite{Jmeter} y descomprimirlo. Tras verificar que tenemos los requerimientos necesarios \cite{Jmeter2}, vamos al manual para crear test para páginas web \cite{Jmeter3}.\\
 	
-	
-	Nuestro test consistirá en crear cinco usuarios que mandarán peticiones a páginas web. Por último, para poder crear estos test de páginas web vamos a necesitar cuatro elementos principales: Thread Group, HTTP Request, HTTP Request Defaults, y Graph Results.\\
+	Nuestro test consistirá en crear cinco usuarios que mandarán peticiones a páginas web. Para poder crear estos test de páginas web vamos a necesitar cuatro elementos principales: Thread Group, HTTP Request, HTTP Request Defaults, y Graph Results.\\
 	
 	\begin{itemize}
 		\item Para el primer elemento(Thread Group) vamos a ir a la interfaz para crear un grupo de hilos:\\
@@ -235,7 +272,7 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 			\label{fig:GraficoJmeter}
 		\end{figure}
 		
-		En la parte de abajo del gráfico, vemos valores clave del mismo gráfico, entre ellos la media y la mediada. Según estos, la mitad de las peticiones, que han sido 700, se han llevado a cabo en un tiempo menor a 4 ms, con una media total de 6ms. También vemos en la gráfica que las primeras peticiones tardaban más, pero que al final el tiempo de respuesta y todos los parámetros que en el intervienen se estabilizan.
+		En la parte de abajo del gráfico, vemos valores clave del mismo gráfico, entre ellos la media y la mediana. Según estos, la mitad de las peticiones, que han sido 700, se han llevado a cabo en un tiempo menor a 4 ms, con una media total de 6ms. También vemos en la gráfica que las primeras peticiones tardaban más, pero que al final el tiempo de respuesta y todos los parámetros que en el intervienen se estabilizan.
 
 	\end{itemize}
 	
@@ -245,8 +282,8 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 	Para la realización del benchmark se ha consultado el benchmark publicado el año pasado por el compañero de clase Oscar \cite{oscar} y se ha modificado. A continuación se explican los campos que se requieren:\\
 	
 	\begin{itemize}
-		\item Para comenzar, el Benchmark pretende medir los MFLOPS del computador en el que se ejecuten. Para ello, la rutina que ejecutará será la de invertir una matriz de dimensión 1000 aleatoria por el método de descomposición LU y se calcularán las operaciones en coma flotante necesarias para ella. Se medirá el tiempo necesario en la inversión y, a partir de los datos de tiempo y número de operaciones, se calculñarán los MFLOPS.
-		\item Para que el benchmark sea más homogeneo, este calculo se hará 5 veces y se calculará la media. 
+		\item Para comenzar, el Benchmark pretende medir los MFLOPS del computador en el que se ejecuten. Para ello, la rutina que ejecutará será la de invertir una matriz de dimensión 1000 aleatoria por el método de descomposición LU y se calcularán las operaciones en coma flotante necesarias para ella. Se medirá el tiempo necesario en la inversión y, a partir de los datos de tiempo y número de operaciones, se calcularán los MFLOPS.
+		\item Para que el benchmark sea más homogéneo, este calculo se hará 5 veces y se calculará la media. 
 		
 		\item La forma de ejecución de este Benchmark será simplemente ejecutar el script benchmark.sh, que sacará por pantalla el número de MFLOPS del computador. El funcionamiento de este script es el siguiente: primero compila los programas necesarios para la ejecución(el que invierte la matriz y el que calcula la media de los datos). Tras esto, llama y guarda los resultados de la ejecución del programa que calcula la inversa de la matriz las cinco veces dichas anteriormente. Tras esto, calcula la media de estos valores y lo muestra en pantalla.
 	\end{itemize}
@@ -257,11 +294,18 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 		\begin{tabular}{| l || r | }
 			\hline
 			Procesador & MFLOPS\\ \hline \hline
-			Intel® Core™ i7-3630QM CPU @ 2.40GHz × 8  & 497.205 \\ \hline
-			7 & 9 \\
+			Intel® Core™ i7-3630QM CPU @ 2.40GHz x 8  & 507.047 \\ \hline
+			Intel® Core™ i7-3630QM CPU @ 2.40GHz & 438.071	\\ \hline
+			2.4 GHz Intel Intel® Core™ 2 Duo & 259.229 \\
 			\hline
 		\end{tabular}
 	\end{center}
+	
+	Los resultados de las dos primeras pruebas corresponden a mi máquina host con SO Ubuntu 14.04, y a una máquina virtual corriendo encima de esta, con Ubuntu 14.04 también. Es clara la diferencia entre una y otra, ya que a más MFLOPS, mejores prestaciones para el cálculo, lo cual es razonable al comparar una máquina y sus máquinas virtuales. La última medición se realizó en otra máquina con SO MacOS, así que la comparación de prestaciones decidirá que máquina es mejor para el cálculo científico.\\
+	
+	En este caso, vemos claramente que el tercer computador tiene peores prestaciones(en cuanto a operaciones en coma flotante se refiere) ya que, interpretando los datos, ejecuta menos operaciones en coma flotante por segundo que el primero. \\
+	
+	Se adjunta el código del benchmark en el archivo .zip de la entega.
 	
 \end{itemize}
 
@@ -270,8 +314,10 @@ En este apartado vamos a responder las preguntas relacionadas con Apache Benchma
 \newpage
 
 \begin{thebibliography}{xx}
+	\bibitem{phoronix-inst} http://www.phoronix-test-suite.com/?k=downloads
 	\bibitem{phoronix} http://www.phoronix-test-suite.com/documentation/phoronix-test-suite.pdf
 	\bibitem{ab} https://httpd.apache.org/docs/2.4/programs/ab.html
+	\bibitem{ps} http://linux.die.net/man/1/ps
 	\bibitem{scala} http://www.scala-lang.org/
 	\bibitem{gatling} http://gatling.io/docs/2.2.1/quickstart.html
 	\bibitem{benchmarkingJmGt} https://blog.flood.io/benchmarking-jmeter-and-gatling/
