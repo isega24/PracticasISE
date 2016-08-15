@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  11 JUN 2016 13:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  12 JUN 2016 22:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -729,95 +729,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--148
 
  []
 
-<Gatling_results1.png, id=51, 1219.55624pt x 698.61pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+
+ []
+
+<Ejemplo_Ejecucion.png, id=51, 803.0pt x 879.285pt>
+File: Ejemplo_Ejecucion.png Graphic file (type png)
+
+<use Ejemplo_Ejecucion.png>
+Package pdftex.def Info: Ejemplo_Ejecucion.png used on input line 153.
+(pdftex.def)             Requested size: 292.7776pt x 320.59424pt.
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+
+ []
+
+<globalInformationConsola.png, id=55, 770.88pt x 313.17pt>
+File: globalInformationConsola.png Graphic file (type png)
+
+<use globalInformationConsola.png>
+Package pdftex.def Info: globalInformationConsola.png used on input line 163.
+(pdftex.def)             Requested size: 292.7776pt x 118.93892pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+
+ []
+
+[11 <./Ejemplo_Ejecucion.png> <./globalInformationConsola.png>]
+<distribucion-respuestas.png, id=60, 906.38625pt x 370.38374pt>
+File: distribucion-respuestas.png Graphic file (type png)
+
+<use distribucion-respuestas.png>
+Package pdftex.def Info: distribucion-respuestas.png used on input line 172.
+(pdftex.def)             Requested size: 292.7776pt x 119.63858pt.
+
+<Gatling_results1.png, id=61, 910.40125pt x 477.785pt>
 File: Gatling_results1.png Graphic file (type png)
 
 <use Gatling_results1.png>
-Package pdftex.def Info: Gatling_results1.png used on input line 152.
-(pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
+Package pdftex.def Info: Gatling_results1.png used on input line 180.
+(pdftex.def)             Requested size: 292.7776pt x 153.65251pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--155
-
- []
-
-<NumeroRequestGatling.png, id=52, 675.52374pt x 272.01625pt>
+<NumeroRequestGatling.png, id=62, 909.3975pt x 373.395pt>
 File: NumeroRequestGatling.png Graphic file (type png)
 
 <use NumeroRequestGatling.png>
-Package pdftex.def Info: NumeroRequestGatling.png used on input line 160.
-(pdftex.def)             Requested size: 292.7776pt x 117.89444pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 157--163
-
- []
-
-<NumeroRespuestasGatling.png, id=53, 680.5425pt x 280.04625pt>
+Package pdftex.def Info: NumeroRequestGatling.png used on input line 189.
+(pdftex.def)             Requested size: 292.7776pt x 120.21242pt.
+ [12 <./distribucion-respuestas.png> <./Gatling_results1.png>] <NumeroRespuesta
+sGatling.png, id=66, 905.3825pt x 369.38pt>
 File: NumeroRespuestasGatling.png Graphic file (type png)
 
 <use NumeroRespuestasGatling.png>
-Package pdftex.def Info: NumeroRespuestasGatling.png used on input line 166.
-(pdftex.def)             Requested size: 292.7776pt x 120.47736pt.
- [10 <./Gatling_results1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 174--176
+Package pdftex.def Info: NumeroRespuestasGatling.png used on input line 198.
+(pdftex.def)             Requested size: 292.7776pt x 119.44398pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+ []
+
+[13 <./NumeroRequestGatling.png> <./NumeroRespuestasGatling.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--180
-
- []
-
-[11 <./NumeroRequestGatling.png> <./NumeroRespuestasGatling.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 188.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 188.
-
-<Gatling-Jmeter-Net.png, id=61, 749.80125pt x 357.335pt>
-File: Gatling-Jmeter-Net.png Graphic file (type png)
-
-<use Gatling-Jmeter-Net.png>
-Package pdftex.def Info: Gatling-Jmeter-Net.png used on input line 192.
-(pdftex.def)             Requested size: 292.7776pt x 139.52911pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--195
-
- []
-
-<UsoCPU-JmeterGatling.png, id=62, 750.805pt x 356.33125pt>
-File: UsoCPU-JmeterGatling.png Graphic file (type png)
-
-<use UsoCPU-JmeterGatling.png>
-Package pdftex.def Info: UsoCPU-JmeterGatling.png used on input line 202.
-(pdftex.def)             Requested size: 292.7776pt x 138.9523pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--205
-
- []
-
-[12 <./Gatling-Jmeter-Net.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
@@ -828,108 +810,156 @@ Underfull \hbox (badness 10000) in paragraph at lines 217--218
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
-<ThreadGroup.png, id=67, 1219.55624pt x 698.61pt>
-File: ThreadGroup.png Graphic file (type png)
- <use ThreadGroup.png>
-Package pdftex.def Info: ThreadGroup.png used on input line 226.
-(pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 222.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 222.
+
+<Gatling-Jmeter-Net.png, id=71, 749.80125pt x 357.335pt>
+File: Gatling-Jmeter-Net.png Graphic file (type png)
+
+<use Gatling-Jmeter-Net.png>
+Package pdftex.def Info: Gatling-Jmeter-Net.png used on input line 226.
+(pdftex.def)             Requested size: 292.7776pt x 139.52911pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 223--229
 
  []
 
-[13 <./UsoCPU-JmeterGatling.png>]
-<JmeterThreadGroup.png, id=72, 973.6375pt x 586.19pt>
+[14] <UsoCPU-JmeterGatling.png, id=76, 750.805pt x 356.33125pt>
+File: UsoCPU-JmeterGatling.png Graphic file (type png)
+
+<use UsoCPU-JmeterGatling.png>
+Package pdftex.def Info: UsoCPU-JmeterGatling.png used on input line 236.
+(pdftex.def)             Requested size: 292.7776pt x 138.9523pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--239
+
+ []
+
+[15 <./Gatling-Jmeter-Net.png> <./UsoCPU-JmeterGatling.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+
+ []
+
+<ThreadGroup.png, id=80, 1219.55624pt x 698.61pt>
+File: ThreadGroup.png Graphic file (type png)
+ <use ThreadGroup.png>
+Package pdftex.def Info: ThreadGroup.png used on input line 259.
+(pdftex.def)             Requested size: 292.7776pt x 167.71246pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--262
+
+ []
+
+<JmeterThreadGroup.png, id=81, 973.6375pt x 586.19pt>
 File: JmeterThreadGroup.png Graphic file (type png)
 
 <use JmeterThreadGroup.png>
-Package pdftex.def Info: JmeterThreadGroup.png used on input line 234.
+Package pdftex.def Info: JmeterThreadGroup.png used on input line 267.
 (pdftex.def)             Requested size: 292.7776pt x 176.2698pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 231--237
+Underfull \hbox (badness 10000) in paragraph at lines 264--270
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+[16 <./ThreadGroup.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
-[14 <./ThreadGroup.png> <./JmeterThreadGroup.png>]
-<HTTPPorDefecto.png, id=77, 1093.08376pt x 586.19pt>
+<HTTPPorDefecto.png, id=86, 1093.08376pt x 586.19pt>
 File: HTTPPorDefecto.png Graphic file (type png)
  <use HTTPPorDefecto.png>
-Package pdftex.def Info: HTTPPorDefecto.png used on input line 243.
+Package pdftex.def Info: HTTPPorDefecto.png used on input line 276.
 (pdftex.def)             Requested size: 292.7776pt x 157.00328pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 250--251
-
- []
-
-<PeticionHTTP.png, id=78, 1095.09125pt x 583.17876pt>
-File: PeticionHTTP.png Graphic file (type png)
- <use PeticionHTTP.png>
-Package pdftex.def Info: PeticionHTTP.png used on input line 254.
-(pdftex.def)             Requested size: 292.7776pt x 155.91202pt.
-
-<GraficosJmeter.png, id=79, 977.6525pt x 589.20125pt>
-File: GraficosJmeter.png Graphic file (type png)
- <use GraficosJmeter.png>
-Package pdftex.def Info: GraficosJmeter.png used on input line 262.
-(pdftex.def)             Requested size: 292.7776pt x 176.44707pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 259--265
-
- []
-
-[15 <./HTTPPorDefecto.png> <./PeticionHTTP.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
-
- []
-
-<GraficoJmeter.png, id=83, 837.1275pt x 442.65375pt>
-File: GraficoJmeter.png Graphic file (type png)
- <use GraficoJmeter.png>
-Package pdftex.def Info: GraficoJmeter.png used on input line 271.
-(pdftex.def)             Requested size: 292.7776pt x 154.80954pt.
-
-[16 <./GraficosJmeter.png> <./GraficoJmeter.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 281--282
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
 
+[17 <./JmeterThreadGroup.png> <./HTTPPorDefecto.png>]
+<PeticionHTTP.png, id=90, 1095.09125pt x 583.17876pt>
+File: PeticionHTTP.png Graphic file (type png)
+ <use PeticionHTTP.png>
+Package pdftex.def Info: PeticionHTTP.png used on input line 287.
+(pdftex.def)             Requested size: 292.7776pt x 155.91202pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
+<GraficosJmeter.png, id=91, 977.6525pt x 589.20125pt>
+File: GraficosJmeter.png Graphic file (type png)
+ <use GraficosJmeter.png>
+Package pdftex.def Info: GraficosJmeter.png used on input line 295.
+(pdftex.def)             Requested size: 292.7776pt x 176.44707pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--298
 
  []
 
-[17] [18]
+[18 <./PeticionHTTP.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
+
+ []
+
+<GraficoJmeter.png, id=95, 837.1275pt x 442.65375pt>
+File: GraficoJmeter.png Graphic file (type png)
+ <use GraficoJmeter.png>
+Package pdftex.def Info: GraficoJmeter.png used on input line 304.
+(pdftex.def)             Requested size: 292.7776pt x 154.80954pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+
+ []
+
+[19 <./GraficosJmeter.png> <./GraficoJmeter.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 325--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
+
+ []
+
+[20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
 []\T1/cmr/m/n/10.95 https://repo1.maven.org/maven2/io/gatling/highcharts/gatlin
 g-charts-highcharts-
  []
 
-[19] (./MemoriaPractica4.aux
+[22] (./MemoriaPractica4.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5137 strings out of 493304
- 72669 string characters out of 6139871
- 182788 words of memory out of 5000000
- 8470 multiletter control sequences out of 15000+600000
+ 5156 strings out of 493304
+ 73202 string characters out of 6139871
+ 182824 words of memory out of 5000000
+ 8486 multiletter control sequences out of 15000+600000
  19284 words of font info for 54 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 46i,12n,47p,900b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,12n,47p,1083b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1
@@ -940,10 +970,10 @@ public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
 2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb></usr/share
 /texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texmf/fonts/type1/p
 ublic/cm-super/sfsx1440.pfb>
-Output written on MemoriaPractica4.pdf (19 pages, 1272326 bytes).
+Output written on MemoriaPractica4.pdf (22 pages, 1398515 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 147 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

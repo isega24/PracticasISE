@@ -22,7 +22,7 @@ Cuestión 9
 
 
 Cuestión 10
-    
+
 Instalar lamp-server^ en ubuntu
 
 Instalar httpct, maria-db / mariadb, php, php-mysql en centos
@@ -47,7 +47,7 @@ Objetivo: FTP windows con un fichero no vacio y descargarlo desde ubuntu.
 
     3 Crear un usuario windows
     4 Crear un servidor FTP(permitiendo usuario anterior)
-        Windows habla de roles cuando quiere hablar sobre servicios.
+        Windows habla de roles cuando quiere hablar de servicios.
         FTP agregar sitio(ftp) Hay que dar una carpeta desde la cual el servicio actue.
 
         Sin SSL
