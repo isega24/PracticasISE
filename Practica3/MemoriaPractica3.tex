@@ -37,16 +37,20 @@
 
 \subsection{Programación de tareas con cron}
 \begin{itemize}
-	\item \textbf{¿Qué archivo ha de modificar para programar una tarea? Escriba la línea
-		necesaria para ejecutar una vez al día una copia del directorio ~/codigo a ~/seguridad/
-		$fecha$ donde $fecha$ es la fecha actual (puede usar el comando date)}\\
+	\item \textbf{¿Qué archivo ha de modificar para programar una tarea? Escriba la línea necesaria para ejecutar una vez al día una copia del directorio ~/$codigo$ a ~/$seguridad$/$fecha$ donde $fecha$ es la fecha actual (puede usar el comando date)}\\
 	Según \cite{crontab}, debemos modificar los archivos en $/var/spool/cron/crontabs/$, sin embargo no están hechos para ser modificados directamente. Se nos ofrece, para modificar el archivo de programación de tareas, el comando $crontab$, que con la opción $-e$, nos deja modificar desde la terminal con el editor de texto que prefiramos.\\
 	
 	La linea que debemos añadir será la siguiente:\\
 	
-	$0 0 * * * cp -r ~codigo ~/seguridad/`date`$\\
+	00 0 * * *  /$home$/$ivan$/$script.sh$\\
 	
-	Los primeros cinco $items$ de la sentencia indican cuando queremos que se realice la tarea que se muestra a continuación, por este orden: minuto hora diaDelMes Mes DiaDeLaSemana. No hace especificar todos los campos, ya que el poner un asterisco($*$) nos dice que no tenga en cuenta este campo. Por ello, en nuestra sentencia, queremos que se ejecute el comando siempre que sean las doce de la noche, sea el día que sea, el mes que sea y el día de la semana que sea.
+	en donde script.sh tiene permisos de ejecución y es el siguiente:\\
+	
+	\#!/bin/bash\\
+	cp -r ~/codigo ~/seguridad/`date +\%y\%m\%d\%H\%M\%S`\\
+	
+	
+	Los primeros cinco $items$ de la sentencia indican cuando queremos que se realice la tarea que se muestra a continuación, por este orden: minuto hora diaDelMes Mes DiaDeLaSemana. No hay que especificar todos los campos, ya que el poner un asterisco($*$) nos dice que no tenga en cuenta este campo. Por ello, en nuestra sentencia, queremos que se ejecute el comando siempre que sean las doce de la noche, sea el día que sea, el mes que sea y el día de la semana que sea. El parámetro `date` nos sirve para cambiar el nombre del archivo a la fecha actual y así tener archivos con distinto nombre.
 \end{itemize}
 
 \subsection{Analizando que ocurre en el Kernel con Dmesg}
@@ -57,13 +61,13 @@
 		tail). Comente qué observa en la información mostrada.}\\
 	
 	\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{dmesgPenDrive}
-	\caption[dmesg]{Mensaje mostrado por dmesg antes y después de conectar un pen-drive}
-	\label{fig:dmesgPenDrive}
+		\centering
+		\includegraphics[width=0.7\linewidth]{dmesgPenDrive}
+		\caption[dmesg]{Mensaje mostrado por dmesg antes y después de conectar un pen-drive}
+		\label{fig:dmesgPenDrive}
 	\end{figure}
 	
-	Antes de conectar el pen-drive, no teníamos ninguna referencia del mismo. Tras conectarlo, el primer mensaje que se nos muestra es la presencia del mismo. También nos ofrece más información como que el disco no fue debidamente desmontado.
+	Antes de conectar el pen-drive, no teníamos ninguna referencia del mismo. Tras conectarlo, el primer mensaje que se nos muestra es la presencia del mismo. También se nos muestran detalles como la capacidad del USB y el uso de la misma(4.01 GB/3.73 GiB) o que se puede escribir en el mismo. En la última línea nos dice que el disco no fue debidamente desmontado.
 
 	
 \end{itemize}
@@ -75,7 +79,7 @@
 		
 		\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.6\linewidth]{Profiling_windows}
+		\includegraphics[width=0.6\linewidth]{WindowsCPU}
 		\caption[WindowsMonitor]{Monitor de rendimiento en Windows.}
 		\label{fig:Profiling_windows}
 		\end{figure}
@@ -84,10 +88,25 @@
 		
 		\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.6\linewidth]{WindowsCPU}
+		\includegraphics[width=0.6\linewidth]{WindowsCPU2}
 		\caption[WindowsCPU]{Uso de la CPU en windows.}
 		\label{fig:WindowsCPU}
 		\end{figure}
+		
+		en donde se ve en las gráficas que el uso de la CPU está por debajo del 50\% desde hace 60 segundos.\\
+		
+		Para obtener datos de la memoria usada por windows:\\
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{WindowsMemoria}
+			\caption[Windows memoria]{Uso de la memoria total de Windows.}
+			\label{fig:WindowsMemoria}
+		\end{figure}
+		
+		en concreto, se ve que en nuestra máquina virtual se está usando mas de la mitad de la memoria que le hemos dado, que hay 195Mb de memoria disponible y 147 en caché.
+
+		
 		
 		\item \textbf{Cree un recopilador de datos definido por el usuario (modo avanzado) que incluya tanto el contador de rendimiento como los datos de seguimiento: todos los referentes al procesador, al proceso y al servicio web, con un intervalo de muestra de 15 segundos y que almacene el resultado en el directorio $/Escritorio/logs$. Incluya las capturas de pantalla de cada paso.}\\
 		
@@ -140,6 +159,27 @@
 		\label{fig:seguimiento}
 		\end{figure}
 		
+		Nos vamos al directorio donde hemos guardado el monitor y lo ejecutamos:\\
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{MonitorEnEjecucion}
+			\caption[Monitor en ejecución]{Monitor de rendimiento en ejuecución.}
+			\label{fig:MonitorEnEjecucion}
+		\end{figure}
+		
+		Como vemos, la gráfica está demasiado llena. Deseleccionando algunas de ellas:\\
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\linewidth]{WindowsOperacionesES}
+			\caption[OperacionES]{Operaciones de entrada y salida en el sistema.}
+			\label{fig:WindowsOperacionesES}
+		\end{figure}
+		
+		 obtenemos la gráfica de un aspecto concreto. En la gráfica mostrada se ilustra el número de operaciones de entrada/salida por segundo del sistema. Podemos ver el número medio de operaciones, la última medición realizada y otros datos estadísticos de estas mediciones. Ej: El número de operaciones entrada/salida por segundo máximo que ha realizado el sistema es de más de 114 operaciones por segundo.
+		
+
+		
 \end{itemize}
 
 \section{Monitorización del Hardware.}
@@ -188,6 +228,8 @@
 	\label{fig:monitoring_munin_cpu}
 	\end{figure}
 	
+	En el se muestra los usos que ha tenido la CPU. Entre ellos, está el porcentaje de uso de la CPU de el usuario user, que es de alrededor del 5.48%.\\
+	
 	Otro parámetro a monitorizar que nos ofrece Munin es el número de procesos y el estado de los mismos:\\
 	
 	\begin{figure}[H]
@@ -197,14 +239,36 @@
 	\label{fig:monitorin_munin_procesos}
 	\end{figure}
 	
-	En este gráfico vemos que hay alrededor de 110 procesos lanzados de los cuales la gran mayoría está $sleeping$, o esperando a estar corriendo. También vemos que apenas han quedado procesos zombies. Es importante notar que siempre hay al menos un proceso ejecutandose.
+	En este gráfico vemos que hay alrededor de 110 procesos lanzados de los cuales la gran mayoría está $sleeping$, o esperando a estar corriendo. También vemos que apenas han quedado procesos zombies. Es importante notar que siempre hay al menos un proceso ejecutandose.\\
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{MuninHebras}
+		\caption[HebrasMunin]{Número de hebras que hay en cada momento en el servidor.}
+		\label{fig:MuninHebras}
+	\end{figure}
+
+	Este parámetro nos indica el número de hebras en cada momento. Los dos gráficos nos muestran distintas intervalos de tiempo: por día y por semana. Hay alrededor de 171.32 hebras de media en el día de hoy en contraste con una media de 184 hebras en la semana. Esto es debido a que a lo largo de la semana ha tenido más hebras que hoy.\\
+	
+	Por último, en el parámetro experimental:\\
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{MuninExperimental}
+		\caption[MuninExperimental]{Parámetro Experimental de Munin.}
+		\label{fig:MuninExperimental}
+	\end{figure}
+	
+	que a priori parece que está hecho para anotar en una gráfica texto con sentido. No tengo más datos sobre este parámetro.
+	
 	
 \end{itemize}
 \subsection{Zabbix}
 \begin{itemize}
+	\section{ZABBIX ME FALTA}
 	\item \textbf{Prueba a instalar este monitor es alguno de sus tres sistemas. Realice capturas de pantalla del proceso de instalación y comente capturas de pantalla del programa en ejecución.}\\
 	
-	Para instalar el monitor de zabbix he consultado los manuales de la página\cite{zabbix} para descargar este desde paquetes. Según la misma página nos da las instrucciones. Para empezar tenemos que añadir a lista de repositorios el repositorio de este proyecto:\\
+	Para instalar el monitor de zabbix he consultado los manuales de la página\cite{zabbix} para descargar este desde paquetes. Para empezar tenemos que añadir a la lista de repositorios el repositorio de este proyecto:\\
 	
 	$wget$ $http://repo.zabbix.com/zabbix/3.0/ubuntu/pool/main/z/zabbix-release/zabbix$-$	release\_3$.$0$-$1$+$trusty\_all.deb$ \\
 	$dpkg$ -$i$ $zabbix-release_3.0$-$1+trusty_all.deb$\\
@@ -212,13 +276,21 @@
 	
 	Tras lo cual podremos instalar los paquetes necesarios para el servidor de zabbix:\\
 	
-	$apt$-$get$ $install$ $zabbix$-$server$-$mysql$ $zabbix$-$frontend$-$php$\\
+	$apt$-$get$ $install$ $zabbix$-$server$-$mysql$ $zabbix$-$frontend$-$php$ $zabbix$-$agent$\\
 	
-	Para tener zabbix inicializado con una base de datos ya creada, se nos facilita un ejemplo que podemos utilizar para comprobar que está funcionando. Para ello, ejecutamos el siguiente script que se encuentra comprimido en el directorio $/usr/share/doc/zabbix$-$server$-$mysql$:\\
+	Para tener zabbix inicializado con una base de datos ya creada, se nos facilita un ejemplo que podemos utilizar para comprobar que está funcionando. Para ello, ejecutamos el siguiente script que nos facilita la página:\\
 	
-	$zcat$ $create.sql.gz$ | $mysql$ -$uroot$ $prueba$\\
+	shell> mysql -uroot -p<password>\\
+	mysql> create database zabbix character set utf8 collate utf8\_bin;\\
+	mysql> grant all privileges on zabbix.* to zabbix@localhost identified by '<password>';\\
+	mysql> quit;\\
 	
-	El nombre de mi base de datos es prueba, creada anteriormente, así ya tenemos la tabla creada. Ahora, como cada vez que instalamos un servicio, debemos asegurarnos que está configurado como queremos, o como nos aconsejan que lo tengamos en la página web del proyecto. Para ello modificamos con nuestro editor favorito su archivo de configuración y descomentamos las siguientes líneas de opciones y añadimos lo necesario para que estas opciones queden en el archivo:\\
+	En el manual, parecen otros archivos como schema.sql, data.sql y images.sql que no los encontramos en el directorio donde nos indican. Esto es porque Ubuntu tiene preparado un script para ello:
+	
+	$/usr/share/doc/zabbix$-$server$-$mysql$:\\
+	$zcat$ $create.sql.gz$ | $mysql$ -$uroot$ $zabbix$\\
+	
+	Ahora, como cada vez que instalamos un servicio, debemos asegurarnos que está configurado como queremos, o como nos aconsejan que lo tengamos en la página web del proyecto. Para ello modificamos con nuestro editor favorito su archivo de configuración y descomentamos las siguientes líneas de opciones y añadimos lo necesario para que estas opciones queden en el archivo:\\
 
 	$DBHost=localhost$\\
 	$DBName=zabbix$\\
@@ -233,7 +305,7 @@
 	
 	$service$ $apache2$ $restart$\\
 	
-	Ahora ya podremos entrar en zabbix desde cualquier navegador, en la ventana de setup:\\
+	Ahora ya podremos entrar en zabbix desde cualquier navegador, en localhost/zabbix/setup.php:\\
 	
 	\begin{figure}[H]
 	\centering
@@ -306,14 +378,16 @@
 
 	
 	
-	 
 \end{itemize}
+\subsection{Cacti}
+
+\textbf{Instale y pruebe el monitor Cacti y pruebe alguna funcionalidad del mismo.}\\
+
 
 \newpage
 \subsection{Monitorizando un servicio}
 \begin{itemize}
-	\item \textbf{Escriba un breve resumen sobre alguno de los artículos donde se muestra
-		el uso de strace, o busque otro programa similar y coméntelo.}\\
+	\item \textbf{Escriba un breve resumen sobre alguno de los artículos donde se muestra el uso de strace, o busque otro programa similar y coméntelo.}\\
 	
 	En mi caso, he visitado la página\cite{strace}, en la que se habla de algunas utilidades de strace y de un problema que el escritor solucionó gracias a este monitor de servicios. Las primeras líneas nos explican que esta herramienta no solo puede monitorizar un servicio desde el principio (lanzándolo con strace), si no que también puede lanzarse aunque el servicio ya esté ejecutándose. Esto es muy útil a la hora de monitorizar daemons que no deban ser reiniciados muy a menudo. En cuanto al problema que plantea, se resume de la siguiente manera: Se está utilizando un servicio SVN que fallaba aleatoriamente y nadie podía acceder al mismo. Reiniciar el servidor arreglaba el problema, pero no permanentemente, volvía a fallar. Al escritor se le ocurrió buscar en los archivos log, pero no había ninguno. Además, a la hora de observar cómo se iniciaban los procesos, todo parecía correcto, pero por alguna razón, el sistema se colgaba. Entonces recurrió, puesto que no podía modificar el código con opciones de debugueo, a utilizar un script que lanzara svnserver pero cazando la información que nos pueda dar strace. De esta forma, los clientes podrían seguir utilizando el servicio. Este cambio hizo visible el problema fácilmente en cuanto varios usuarios utilizaron el servicio. El problema era que a la hora de dar $filehandle$ para lectura, se daba el filehandle número 5, pero este fallaba. \\
 	
@@ -344,8 +418,17 @@
 		\label{fig:python_profiling}
 		\end{figure}
 		
-		en la cual vemos varias llamadas a cada una de las funciones que hemos creado junto con el tiempo que pasa el programa en total en cada función o en particular en cada llamada a cada función.
-
+		en la cual vemos varias llamadas a cada una de las funciones que hemos creado junto con el tiempo que pasa el programa en total en cada función o en particular en cada llamada a cada función.\\
+		
+		\begin{itemize}
+			\item Vemos que hay una función que se llama 5000 veces. Esta es la función g definida anteriormente. Esto es porque se ha llamado desde la función f 5000 veces a g. Por esta razón, vemos que el tiempo que el programa ha estado en esta función es de 1.883 segundos, pero tarda alrededor de 0.001 segundos por llamada.\\
+			
+			\item La función f pasa dentro de la misma(no en subllamadas) alrededor de 0.072 segundos. Sin embargo, el tiempo total que el programa está en esta función y en subllamadas del mismo es 2.691 segundos.\\
+			
+			\item La función append de listas es llamada 124975 veces. Esto es porque en cada subllamada a la función g se llama muchas veces a la función append.
+		\end{itemize}
+		
+		Estas son algunas de las anotaciones que se pueden hacer del profiling que hemos realizado del programa en python.
 
 	\end{itemize}
 
@@ -355,6 +438,7 @@
 	\item \textbf{Acceda a la consola mysql (o a través de phpMyAdmin) y muestre el
 		resultado de mostrar el ”profile” de una consulta (la creación de la BD y la consulta la
 		puede hacer libremente)}\\
+	
 	Tras observar cómo usar el comando SHOW PROFILE y SHOW PROFILES en mysql\cite{mysqlProfile,mysqlProfiles}, para los cuales es necesario cambiar a 1(true) la variable profiling para que estas puedan trabajar, y haber hecho la creación de dos bases de datos, la inserción de unos cuantos datos y unas cuantas consultas pertinentes, el resultado de ejecutar ambos comandos son los siguientes:\\
 	\begin{figure}[H]
 	\centering
@@ -362,6 +446,7 @@
 	\caption[mysqlProfile]{Salida en mysql tras ejecutar SHOW PROFILE.}
 	\label{fig:mysqlProfile}
 	\end{figure}
+	
 	Con este comando podemos ver los tiempos de carga, inicio, comprobación de permisos, etc... que realiza la base de datos. Ahora veamos cuanto ha tardado la base de datos en concreto en realizar las consultas y la creación de tablas:\\
 	\begin{figure}[H]
 	\centering
@@ -369,7 +454,8 @@
 	\caption[mysqlProfiles]{Salida en mysql tras ejecutar SHOW PROFILES.}
 	\label{fig:mysqlProfiles}
 	\end{figure}
-	Aquí podemos ver los tiempos que ha tardado en cada una de las operaciones que le hemos ordenado que haga. En la misma, podemos ver que la creación de la tabla ha tardado alrededor de una décima de segundo y que en las inserciones, ha tardado alrededor de media décima. También vemos que al realizar mal una consulta, descartarla a sido rápido. \\
+	Aquí podemos ver los tiempos que ha tardado en cada una de las operaciones que le hemos ordenado que haga. En la misma, podemos ver que la creación de la tabla ha tardado alrededor de una décima de segundo y que en las inserciones, ha tardado alrededor de media décima. También vemos que al realizar mal una consulta, descartarla ha sido rápido. \\
+	
 	Un dato curioso es que a la hora de mostrar la primera tabla completa  ha tardado menos que en mostrar solo parte de la misma. Esto se debe a que a la hora de filtrar parte de la tabla se gasta más tiempo que en mostrar todo directamente.
 
 \end{itemize}

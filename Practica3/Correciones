@@ -1,0 +1,5 @@
+Cuesti�n opcional 4: varias cosas:
+- Me atrever�a a decir que el proceso de instalaci�n no lo has hecho, y que lo has escrito de memoria, pues est� incompleto:
+no indica los pasos sacados de la documentaci�n oficial para crear manualmente mediante comandos mysql una base de datos para Zabbix.
+- El resto de pasos de instalaci�n muy bien; pero a la hora de comentar el monitor, una gr�fica y 3 l�neas de texto.
+Esto es totalmente insuficiente.

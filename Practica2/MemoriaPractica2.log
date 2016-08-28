@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  31 JUL 2016 14:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  25 AUG 2016 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -608,9 +608,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
-
-LaTeX Warning: Citation `b1' on page 3 undefined on input line 49.
-
 [3]
 Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
@@ -638,9 +635,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-
-LaTeX Warning: Citation `opensuse' on page 4 undefined on input line 68.
-
 [4]
 Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
@@ -657,41 +651,940 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
  []
 
 
-LaTeX Warning: Citation `ssh_config' on page 5 undefined on input line 84.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
-<ssh_no_clave.png, id=24, 566.115pt x 231.86626pt>
+<clientessh-X.png, id=24, 1606.0pt x 879.285pt>
+File: clientessh-X.png Graphic file (type png)
+ <use clientessh-X.png>
+Package pdftex.def Info: clientessh-X.png used on input line 90.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+<servidorssh-X.png, id=26, 1305.87875pt x 746.79pt>
+File: servidorssh-X.png Graphic file (type png)
+ <use servidorssh-X.png>
+Package pdftex.def Info: servidorssh-X.png used on input line 97.
+(pdftex.def)             Requested size: 292.7776pt x 167.42795pt.
+
+[5 <./clientessh-X.png>] <Conexion-X.png, id=33, 1606.0pt x 879.285pt>
+File: Conexion-X.png Graphic file (type png)
+
+<use Conexion-X.png>
+Package pdftex.def Info: Conexion-X.png used on input line 104.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ <UsoGedit.png, id=34, 1606.0pt x 879.285pt>
+File: UsoGedit.png Graphic file (type png)
+
+<use UsoGedit.png>
+Package pdftex.def Info: UsoGedit.png used on input line 113.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [6 <./servidorssh-X.png> <./Conexion-X.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+<servidor-no-grafico.png, id=40, 636.3775pt x 328.22626pt>
+File: servidor-no-grafico.png Graphic file (type png)
+
+<use servidor-no-grafico.png>
+Package pdftex.def Info: servidor-no-grafico.png used on input line 122.
+(pdftex.def)             Requested size: 292.7776pt x 151.00594pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+<Conexion-no-grafica.png, id=41, 1606.0pt x 879.285pt>
+File: Conexion-no-grafica.png Graphic file (type png)
+
+<use Conexion-no-grafica.png>
+Package pdftex.def Info: Conexion-no-grafica.png used on input line 131.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [7 <./UsoGedit.png> <./servidor-no-grafico.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+<gedit_fail.png, id=47, 1606.0pt x 879.285pt>
+File: gedit_fail.png Graphic file (type png)
+ <use gedit_fail.png>
+Package pdftex.def Info: gedit_fail.png used on input line 140.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+<ssh_no_clave.png, id=48, 566.115pt x 231.86626pt>
 File: ssh_no_clave.png Graphic file (type png)
  <use ssh_no_clave.png>
-Package pdftex.def Info: ssh_no_clave.png used on input line 92.
+Package pdftex.def Info: ssh_no_clave.png used on input line 155.
 (pdftex.def)             Requested size: 292.7776pt x 119.91661pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+[8 <./Conexion-no-grafica.png> <./gedit_fail.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
-[5 <./ssh_no_clave.png>] <keygen.png, id=29, 502.87875pt x 361.35pt>
+<keygen.png, id=54, 502.87875pt x 361.35pt>
 File: keygen.png Graphic file (type png)
-
-<use keygen.png>
-Package pdftex.def Info: keygen.png used on input line 102.
+ <use keygen.png>
+Package pdftex.def Info: keygen.png used on input line 164.
 (pdftex.def)             Requested size: 292.7776pt x 210.37712pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-<ssh-copy-id.png, id=30, 798.985pt x 235.88126pt>
+<ssh-copy-id.png, id=55, 798.985pt x 235.88126pt>
 File: ssh-copy-id.png Graphic file (type png)
  <use ssh-copy-id.png>
-Package pdftex.def Info: ssh-copy-id.png used on input line 113.
+Package pdftex.def Info: ssh-copy-id.png used on input line 175.
 (pdftex.def)             Requested size: 292.7776pt x 86.43607pt.
 
-[6 <./keygen.png> <./ssh-copy-id.png>] [7] [8] (./MemoriaPractica2.aux
+[9 <./ssh_no_clave.png> <./keygen.png>]
+<ssh_con_clave_publica.png, id=59, 548.0475pt x 233.87375pt>
+File: ssh_con_clave_publica.png Graphic file (type png)
+
+<use ssh_con_clave_publica.png>
+Package pdftex.def Info: ssh_con_clave_publica.png used on input line 184.
+(pdftex.def)             Requested size: 292.7776pt x 124.94098pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+
+ []
+
+[10 <./ssh-copy-id.png> <./ssh_con_clave_publica.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+<conexion_puerto_22222.png, id=64, 564.1075pt x 450.68375pt>
+File: conexion_puerto_22222.png Graphic file (type png)
+
+<use conexion_puerto_22222.png>
+Package pdftex.def Info: conexion_puerto_22222.png used on input line 206.
+(pdftex.def)             Requested size: 292.7776pt x 233.9099pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+
+ []
+
+[11 <./conexion_puerto_22222.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+
+ []
+
+<terminator.png, id=68, 1606.0pt x 879.285pt>
+File: terminator.png Graphic file (type png)
+ <use terminator.png>
+Package pdftex.def Info: terminator.png used on input line 227.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+<ScreenConexion1.png, id=69, 1305.87875pt x 746.79pt>
+File: ScreenConexion1.png Graphic file (type png)
+
+<use ScreenConexion1.png>
+Package pdftex.def Info: ScreenConexion1.png used on input line 237.
+(pdftex.def)             Requested size: 292.7776pt x 167.42795pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--240
+
+ []
+
+[12 <./terminator.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+
+ []
+
+<screenSshNormal.png, id=74, 1305.87875pt x 746.79pt>
+File: screenSshNormal.png Graphic file (type png)
+
+<use screenSshNormal.png>
+Package pdftex.def Info: screenSshNormal.png used on input line 246.
+(pdftex.def)             Requested size: 292.7776pt x 167.42795pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
+
+ []
+
+<ScreenDetached.png, id=75, 721.69624pt x 461.725pt>
+File: ScreenDetached.png Graphic file (type png)
+ <use ScreenDetached.png>
+Package pdftex.def Info: ScreenDetached.png used on input line 255.
+(pdftex.def)             Requested size: 292.7776pt x 187.30759pt.
+
+[13 <./ScreenConexion1.png> <./screenSshNormal.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+
+ []
+
+<ScreenVolver.png, id=82, 725.71124pt x 462.72874pt>
+File: ScreenVolver.png Graphic file (type png)
+ <use ScreenVolver.png>
+Package pdftex.def Info: ScreenVolver.png used on input line 266.
+(pdftex.def)             Requested size: 292.7776pt x 186.68393pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+
+ []
+
+[14 <./ScreenDetached.png> <./ScreenVolver.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+
+ []
+
+<Contrasena_mysql.png, id=86, 803.0pt x 603.25375pt>
+File: Contrasena_mysql.png Graphic file (type png)
+
+<use Contrasena_mysql.png>
+Package pdftex.def Info: Contrasena_mysql.png used on input line 302.
+(pdftex.def)             Requested size: 292.7776pt x 219.95107pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
+
+ []
+
+[15 <./Contrasena_mysql.png>]
+<Acceso_web_UbuntuServer.png, id=90, 1305.87875pt x 746.79pt>
+File: Acceso_web_UbuntuServer.png Graphic file (type png)
+
+<use Acceso_web_UbuntuServer.png>
+Package pdftex.def Info: Acceso_web_UbuntuServer.png used on input line 311.
+(pdftex.def)             Requested size: 292.7776pt x 167.42795pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
+
+ []
+
+<instalar_lamp.png, id=91, 1305.87875pt x 746.79pt>
+File: instalar_lamp.png Graphic file (type png)
+ <use instalar_lamp.png>
+Package pdftex.def Info: instalar_lamp.png used on input line 325.
+(pdftex.def)             Requested size: 292.7776pt x 167.42795pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+
+ []
+
+[16 <./Acceso_web_UbuntuServer.png> <./instalar_lamp.png>]
+<AccesoWebCentos.png, id=97, 1305.87875pt x 746.79pt>
+File: AccesoWebCentos.png Graphic file (type png)
+
+<use AccesoWebCentos.png>
+Package pdftex.def Info: AccesoWebCentos.png used on input line 334.
+(pdftex.def)             Requested size: 292.7776pt x 167.42795pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 356--358
+
+ []
+
+[17 <./AccesoWebCentos.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 361.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 361.
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+
+ []
+
+<WSAdministradorPanel.png, id=102, 1606.0pt x 879.285pt>
+File: WSAdministradorPanel.png Graphic file (type png)
+
+<use WSAdministradorPanel.png>
+Package pdftex.def Info: WSAdministradorPanel.png used on input line 378.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+
+ []
+
+<AgregarRoles.png, id=103, 1606.0pt x 879.285pt>
+File: AgregarRoles.png Graphic file (type png)
+ <use AgregarRoles.png>
+Package pdftex.def Info: AgregarRoles.png used on input line 387.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+[18 <./WSAdministradorPanel.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
+
+ []
+
+<SeleccionRoles.png, id=109, 1606.0pt x 879.285pt>
+File: SeleccionRoles.png Graphic file (type png)
+ <use SeleccionRoles.png>
+Package pdftex.def Info: SeleccionRoles.png used on input line 396.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
+<ServiciosDeRol.png, id=110, 1606.0pt x 879.285pt>
+File: ServiciosDeRol.png Graphic file (type png)
+ <use ServiciosDeRol.png>
+Package pdftex.def Info: ServiciosDeRol.png used on input line 405.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+[19 <./AgregarRoles.png> <./SeleccionRoles.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
+
+ []
+
+<FTPWS.png, id=117, 1606.0pt x 879.285pt>
+File: FTPWS.png Graphic file (type png)
+ <use FTPWS.png>
+Package pdftex.def Info: FTPWS.png used on input line 414.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
+
+ []
+
+<ConfirmacionInstalacionWS.png, id=118, 1606.0pt x 879.285pt>
+File: ConfirmacionInstalacionWS.png Graphic file (type png)
+
+<use ConfirmacionInstalacionWS.png>
+Package pdftex.def Info: ConfirmacionInstalacionWS.png used on input line 423.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [20 <./ServiciosDeRol.png> <./FTPWS.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
+
+ []
+
+<WindowsWebPage.png, id=124, 1305.87875pt x 746.79pt>
+File: WindowsWebPage.png Graphic file (type png)
+ <use WindowsWebPage.png>
+Package pdftex.def Info: WindowsWebPage.png used on input line 432.
+(pdftex.def)             Requested size: 292.7776pt x 167.42795pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
+
+ []
+
+<AnadirCuentaUsuarioWS.png, id=125, 1606.0pt x 879.285pt>
+File: AnadirCuentaUsuarioWS.png Graphic file (type png)
+
+<use AnadirCuentaUsuarioWS.png>
+Package pdftex.def Info: AnadirCuentaUsuarioWS.png used on input line 446.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [21 <./ConfirmacionInstalacionWS.png> <./WindowsWebPage.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--454
+
+ []
+
+<AgregarSitioFTP.png, id=131, 1606.0pt x 879.285pt>
+File: AgregarSitioFTP.png Graphic file (type png)
+ <use AgregarSitioFTP.png>
+Package pdftex.def Info: AgregarSitioFTP.png used on input line 457.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
+
+ []
+
+<WindowsServerDirectorioFtp.png, id=132, 1305.87875pt x 746.79pt>
+File: WindowsServerDirectorioFtp.png Graphic file (type png)
+
+<use WindowsServerDirectorioFtp.png>
+Package pdftex.def Info: WindowsServerDirectorioFtp.png used on input line 466.
+
+(pdftex.def)             Requested size: 292.7776pt x 167.42795pt.
+ [22 <./AnadirCuentaUsuarioWS.png> <./AgregarSitioFTP.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 471--472
+
+ []
+
+<ConfiguracionSSL.png, id=138, 1606.0pt x 879.285pt>
+File: ConfiguracionSSL.png Graphic file (type png)
+
+<use ConfiguracionSSL.png>
+Package pdftex.def Info: ConfiguracionSSL.png used on input line 475.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
+
+ []
+
+<PermisosFTP.png, id=139, 1606.0pt x 879.285pt>
+File: PermisosFTP.png Graphic file (type png)
+ <use PermisosFTP.png>
+Package pdftex.def Info: PermisosFTP.png used on input line 484.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [23 <./WindowsServerDirectorioFtp.png> <./ConfiguracionSSL.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 489--490
+
+ []
+
+<ConfiguracionSitiosFinal.png, id=145, 1606.0pt x 879.285pt>
+File: ConfiguracionSitiosFinal.png Graphic file (type png)
+
+<use ConfiguracionSitiosFinal.png>
+Package pdftex.def Info: ConfiguracionSitiosFinal.png used on input line 493.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
+
+ []
+
+<TipoReglaPuerto.png, id=146, 1606.0pt x 879.285pt>
+File: TipoReglaPuerto.png Graphic file (type png)
+ <use TipoReglaPuerto.png>
+Package pdftex.def Info: TipoReglaPuerto.png used on input line 504.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+[24 <./PermisosFTP.png> <./ConfiguracionSitiosFinal.png>]
+<Puerto21.png, id=152, 1606.0pt x 879.285pt>
+File: Puerto21.png Graphic file (type png)
+ <use Puerto21.png>
+Package pdftex.def Info: Puerto21.png used on input line 511.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+<PermitirConexionFTP.png, id=153, 1606.0pt x 879.285pt>
+File: PermitirConexionFTP.png Graphic file (type png)
+
+<use PermitirConexionFTP.png>
+Package pdftex.def Info: PermitirConexionFTP.png used on input line 518.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [25 <./TipoReglaPuerto.png> <./Puerto21.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 523--524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 534--535
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--539
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--542
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 543--546
+
+ []
+
+[26 <./PermitirConexionFTP.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 547--549
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--552
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 553--556
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 562--563
+
+ []
+
+
+LaTeX Warning: Citation `webadminInstalation' on page 27 undefined on input lin
+e 564.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 564--565
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 566--567
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
+
+ []
+
+<AnadirRepo.png, id=164, 723.70375pt x 463.7325pt>
+File: AnadirRepo.png Graphic file (type png)
+ <use AnadirRepo.png>
+Package pdftex.def Info: AnadirRepo.png used on input line 572.
+(pdftex.def)             Requested size: 292.7776pt x 187.60542pt.
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 577--578
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 579--582
+
+ []
+
+<AnadirClave.png, id=168, 718.685pt x 461.725pt>
+File: AnadirClave.png Graphic file (type png)
+ <use AnadirClave.png>
+Package pdftex.def Info: AnadirClave.png used on input line 585.
+(pdftex.def)             Requested size: 292.7776pt x 188.10371pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--592
+
+ []
+
+<WebminInstalled.png, id=169, 724.7075pt x 426.59375pt>
+File: WebminInstalled.png Graphic file (type png)
+
+<use WebminInstalled.png>
+Package pdftex.def Info: WebminInstalled.png used on input line 595.
+(pdftex.def)             Requested size: 292.7776pt x 172.3399pt.
+ [28 <./AnadirRepo.png> <./AnadirClave.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 600--601
+
+ []
+
+<WebminAccesible.png, id=173, 1606.0pt x 879.285pt>
+File: WebminAccesible.png Graphic file (type png)
+ <use WebminAccesible.png>
+Package pdftex.def Info: WebminAccesible.png used on input line 604.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--610
+
+ []
+
+<WebminApacheGlobalConf.png, id=174, 1606.0pt x 879.285pt>
+File: WebminApacheGlobalConf.png Graphic file (type png)
+
+<use WebminApacheGlobalConf.png>
+Package pdftex.def Info: WebminApacheGlobalConf.png used on input line 613.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [29 <./WebminInstalled.png> <./WebminAccesible.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 618--619
+
+ []
+
+<WebminPuertoCambiado.png, id=179, 1606.0pt x 879.285pt>
+File: WebminPuertoCambiado.png Graphic file (type png)
+
+<use WebminPuertoCambiado.png>
+Package pdftex.def Info: WebminPuertoCambiado.png used on input line 622.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
+
+ []
+
+<WebminPuerto8080.png, id=180, 1606.0pt x 879.285pt>
+File: WebminPuerto8080.png Graphic file (type png)
+
+<use WebminPuerto8080.png>
+Package pdftex.def Info: WebminPuerto8080.png used on input line 631.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [30 <./WebminApacheGlobalConf.png> <./WebminPuertoCambiado.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 636--637
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 638--639
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 640--641
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 642--643
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
+
+ []
+
+<phpMyAdminApache2.png, id=186, 722.7pt x 461.725pt>
+File: phpMyAdminApache2.png Graphic file (type png)
+
+<use phpMyAdminApache2.png>
+Package pdftex.def Info: phpMyAdminApache2.png used on input line 650.
+(pdftex.def)             Requested size: 292.7776pt x 187.05396pt.
+ [31 <./WebminPuerto8080.png>]
+<phpmyadminConfPorDefecto.png, id=192, 723.70375pt x 460.72125pt>
+File: phpmyadminConfPorDefecto.png Graphic file (type png)
+
+<use phpmyadminConfPorDefecto.png>
+Package pdftex.def Info: phpmyadminConfPorDefecto.png used on input line 657.
+(pdftex.def)             Requested size: 292.7776pt x 186.3872pt.
+
+<PhpMyadminContrasenaBaseDatos.png, id=193, 724.7075pt x 465.74pt>
+File: PhpMyadminContrasenaBaseDatos.png Graphic file (type png)
+
+<use PhpMyadminContrasenaBaseDatos.png>
+Package pdftex.def Info: PhpMyadminContrasenaBaseDatos.png used on input line 6
+64.
+(pdftex.def)             Requested size: 292.7776pt x 188.15463pt.
+ [32 <./phpMyAdminApache2.png> <./phpmyadminConfPorDefecto.png>]
+<PhpmyadminContrasena2.png, id=197, 725.71124pt x 468.75125pt>
+File: PhpmyadminContrasena2.png Graphic file (type png)
+
+<use PhpmyadminContrasena2.png>
+Package pdftex.def Info: PhpmyadminContrasena2.png used on input line 671.
+(pdftex.def)             Requested size: 292.7776pt x 189.11365pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--677
+
+ []
+
+<PHPMyadminpantallaInicio.png, id=198, 1606.0pt x 879.285pt>
+File: PHPMyadminpantallaInicio.png Graphic file (type png)
+
+<use PHPMyadminpantallaInicio.png>
+Package pdftex.def Info: PHPMyadminpantallaInicio.png used on input line 680.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [33 <./PhpMyadminContrasenaBaseDatos.png> <./PhpmyadminContrasena2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 685--686
+
+ []
+
+<PHpmyadminInicio.png, id=202, 1606.0pt x 879.285pt>
+File: PHpmyadminInicio.png Graphic file (type png)
+
+<use PHpmyadminInicio.png>
+Package pdftex.def Info: PHpmyadminInicio.png used on input line 689.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 694--695
+
+ []
+
+<PHPMyadminDataBases.png, id=203, 1606.0pt x 879.285pt>
+File: PHPMyadminDataBases.png Graphic file (type png)
+
+<use PHPMyadminDataBases.png>
+Package pdftex.def Info: PHPMyadminDataBases.png used on input line 698.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [34 <./PHPMyadminpantallaInicio.png> <./PHpmyadminInicio.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 705--706
+
+ []
+
+<phpPostMaxSize.png, id=209, 724.7075pt x 462.72874pt>
+File: phpPostMaxSize.png Graphic file (type png)
+
+<use phpPostMaxSize.png>
+Package pdftex.def Info: phpPostMaxSize.png used on input line 711.
+(pdftex.def)             Requested size: 292.7776pt x 186.93811pt.
+ [35 <./PHPMyadminDataBases.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 722--723
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 724--725
+
+ []
+
+<directadminWeb.png, id=214, 1606.0pt x 879.285pt>
+File: directadminWeb.png Graphic file (type png)
+ <use directadminWeb.png>
+Package pdftex.def Info: directadminWeb.png used on input line 728.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+[36 <./phpPostMaxSize.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 733--734
+
+ []
+
+<DirectAdminTryDemo.png, id=218, 1606.0pt x 879.285pt>
+File: DirectAdminTryDemo.png Graphic file (type png)
+
+<use DirectAdminTryDemo.png>
+Package pdftex.def Info: DirectAdminTryDemo.png used on input line 737.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 742--743
+
+ []
+
+<DirectAdminStartPage.png, id=219, 1606.0pt x 879.285pt>
+File: DirectAdminStartPage.png Graphic file (type png)
+
+<use DirectAdminStartPage.png>
+Package pdftex.def Info: DirectAdminStartPage.png used on input line 746.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [37 <./directadminWeb.png> <./DirectAdminTryDemo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 751--752
+
+ []
+
+<DirectAdminServiceMonitor.png, id=226, 1606.0pt x 879.285pt>
+File: DirectAdminServiceMonitor.png Graphic file (type png)
+
+<use DirectAdminServiceMonitor.png>
+Package pdftex.def Info: DirectAdminServiceMonitor.png used on input line 755.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 760--761
+
+ []
+
+<DirectAdminFileEditor.png, id=227, 1606.0pt x 879.285pt>
+File: DirectAdminFileEditor.png Graphic file (type png)
+
+<use DirectAdminFileEditor.png>
+Package pdftex.def Info: DirectAdminFileEditor.png used on input line 764.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [38 <./DirectAdminStartPage.png> <./DirectAdminServiceMonitor.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
+
+ []
+
+<DirectAdminCrearCuentaAdministrador.png, id=233, 787.94376pt x 449.68pt>
+File: DirectAdminCrearCuentaAdministrador.png Graphic file (type png)
+
+<use DirectAdminCrearCuentaAdministrador.png>
+Package pdftex.def Info: DirectAdminCrearCuentaAdministrador.png used on input 
+line 773.
+(pdftex.def)             Requested size: 292.7776pt x 167.08572pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 778--779
+
+ []
+
+<DirectAdminCronJobs.png, id=234, 1606.0pt x 879.285pt>
+File: DirectAdminCronJobs.png Graphic file (type png)
+
+<use DirectAdminCronJobs.png>
+Package pdftex.def Info: DirectAdminCronJobs.png used on input line 782.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [39 <./DirectAdminFileEditor.png> <./DirectAdminCrearCuentaAdministrador.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 794--795
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 796--797
+
+ []
+
+<ejemploFind.png, id=239, 724.7075pt x 463.7325pt>
+File: ejemploFind.png Graphic file (type png)
+ <use ejemploFind.png>
+Package pdftex.def Info: ejemploFind.png used on input line 800.
+(pdftex.def)             Requested size: 292.7776pt x 187.34361pt.
+
+<PDFsGuardados.png, id=240, 1305.87875pt x 746.79pt>
+File: PDFsGuardados.png Graphic file (type png)
+ <use PDFsGuardados.png>
+Package pdftex.def Info: PDFsGuardados.png used on input line 807.
+(pdftex.def)             Requested size: 292.7776pt x 167.42795pt.
+
+[40 <./DirectAdminCronJobs.png> <./ejemploFind.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 812--813
+
+ []
+
+<EjemploGrep.png, id=246, 1606.0pt x 879.285pt>
+File: EjemploGrep.png Graphic file (type png)
+ <use EjemploGrep.png>
+Package pdftex.def Info: EjemploGrep.png used on input line 816.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 821--822
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--827
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--830
+
+ []
+
+[41 <./PDFsGuardados.png> <./EjemploGrep.png>]
+<SalidaScript.png, id=252, 726.715pt x 463.7325pt>
+File: SalidaScript.png Graphic file (type png)
+ <use SalidaScript.png>
+Package pdftex.def Info: SalidaScript.png used on input line 833.
+(pdftex.def)             Requested size: 292.7776pt x 186.83414pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 842--843
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--845
+
+ []
+
+<PoweshellGetCommand.png, id=253, 824.07875pt x 572.1375pt>
+File: PoweshellGetCommand.png Graphic file (type png)
+
+<use PoweshellGetCommand.png>
+Package pdftex.def Info: PoweshellGetCommand.png used on input line 848.
+(pdftex.def)             Requested size: 292.7776pt x 203.27173pt.
+ [42 <./SalidaScript.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 853--854
+
+ []
+
+<PowershellProcesos.png, id=257, 1606.0pt x 879.285pt>
+File: PowershellProcesos.png Graphic file (type png)
+
+<use PowershellProcesos.png>
+Package pdftex.def Info: PowershellProcesos.png used on input line 857.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--863
+
+ []
+
+<Powershellstopprocess.png, id=258, 1606.0pt x 879.285pt>
+File: Powershellstopprocess.png Graphic file (type png)
+
+<use Powershellstopprocess.png>
+Package pdftex.def Info: Powershellstopprocess.png used on input line 866.
+(pdftex.def)             Requested size: 292.7776pt x 160.2904pt.
+ [43 <./PoweshellGetCommand.png> <./PowershellProcesos.png>] [44 <./Powershells
+topprocess.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 906--908
+\T1/cmr/m/n/10.95 http://stackoverflow.com/questions/3958615/import-file-size-l
+imit-in-
+ []
+
+[45] [46] (./MemoriaPractica2.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
@@ -700,27 +1593,29 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5012 strings out of 493304
- 69934 string characters out of 6139871
- 181577 words of memory out of 5000000
- 8364 multiletter control sequences out of 15000+600000
- 19209 words of font info for 54 fonts, out of 8000000 for 9000
+ 5445 strings out of 493304
+ 79874 string characters out of 6139871
+ 182402 words of memory out of 5000000
+ 8729 multiletter control sequences out of 15000+600000
+ 20739 words of font info for 56 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 46i,10n,47p,596b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,11n,47p,842b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1
-095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx10
-95.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1/pub
-lic/cm-super/sfti1095.pfb>
-Output written on MemoriaPractica2.pdf (8 pages, 219179 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-supe
+r/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1095.pfb></usr
+/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super
+/sfrm2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb></usr/
+share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texmf/fonts/ty
+pe1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/
+sfti1095.pfb>
+Output written on MemoriaPractica2.pdf (46 pages, 8013790 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 320 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 331 words of extra memory for PDF output out of 10000 (max. 10000000)
 
